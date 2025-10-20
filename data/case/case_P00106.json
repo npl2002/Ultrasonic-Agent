@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00106",
+  "name": "周琳",
+  "gender": "女",
+  "age": 45,
+  "examination_date": "2023-06-21",
+  "symptoms": "吞咽时轻度不适",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.1 mIU/L (正常)",
+    "FT3": "4.2 pmol/L (正常)",
+    "FT4": "15.6 pmol/L (正常)",
+    "TgAb": "35 IU/mL (正常)",
+    "Tg": "20.0 ng/mL"
+  },
+  "device": {
+    "model": "Philips EPIQ 7",
+    "probe_frequency": "12MHz",
+    "overall_gain": "59dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00106.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00106.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00106.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00106.avi",
+      "lymph_nodes": "ln_seg_video_P00106.avi",
+      "esophagus": "eso_seg_video_P00106.avi",
+      "trachea": "trachea_seg_video_P00106.avi",
+      "parathyroid": "para_seg_video_P00106.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约50×18×16mm，左叶约50×18×16mm",
+    "thyroid_shape": "形态规则，包膜清楚",
+    "thyroid_echo": "回声稍低不均",
+    "thyroid_nodules_determined": "左叶下极低回声结节约8×6mm，边界清，形态规则，无微钙化，C-TIRADS 4A 类",
+    "blood_flow_richness": "结节内血流稀少",
+    "blood_flow_velocity": "PSV 31cm/s",
+    "blood_flow_ri": "0.58",
+    "ti_rads_score": "4A"
+  },
+  "reports": {
+    "visual_report": "左叶下极低回声小结节，边界清晰",
+    "structured_report": "左叶8×6mm低回声结节；纵横比<1；未见微钙化；未见外侵；血流稀少。",
+    "verified_report": "低风险结节，建议随访。",
+    "patient_communication": "目前无需治疗，按时复查即可。"
+  },
+  "conclusion": "左叶低回声小结节，C-TIRADS 4A 类",
+  "recommendation": "6–12个月复查超声，必要时FNA",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

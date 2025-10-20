@@ -1,0 +1,60 @@
+{
+  "patient_id": "P00161",
+  "name": "张晨",
+  "gender": "男",
+  "age": 34,
+  "examination_date": "2023-02-11",
+  "symptoms": "体检发现甲状腺回声不均",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.1 mIU/L (正常)",
+    "FT3": "4.4 pmol/L (正常)",
+    "FT4": "15.8 pmol/L (正常)",
+    "Tg": "18.6 ng/mL",
+    "CEA": "2.2 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E9",
+    "probe_frequency": "10MHz",
+    "overall_gain": "60dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00161.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00161.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00161.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00161.avi",
+      "lymph_nodes": "ln_seg_video_P00161.avi",
+      "esophagus": "eso_seg_video_P00161.avi",
+      "trachea": "trachea_seg_video_P00161.avi",
+      "parathyroid": "para_seg_video_P00161.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约50×17×15mm，左叶约49×17×15mm",
+    "thyroid_shape": "形态规则，包膜光滑",
+    "thyroid_echo": "回声细腻均匀",
+    "thyroid_nodules_determined": "未见明确结节或占位",
+    "blood_flow_richness": "腺体血流信号正常",
+    "blood_flow_velocity": "PSV 28cm/s",
+    "blood_flow_ri": "0.56",
+    "ti_rads_score": "2",
+    "diffuse_lesion_evaluation_result": "正常",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "双叶大小形态正常，未见结节",
+    "structured_report": "甲状腺体积与形态正常；实质回声均匀；CDFI未见异常增多；颈部未见异常淋巴结。",
+    "verified_report": "常规体检，未发现异常。",
+    "patient_communication": "此次超声未见异常，建议每年复查。"
+  },
+  "conclusion": "未见占位性病变，C-TIRADS 2 类",
+  "recommendation": "建议年度体检超声随访",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

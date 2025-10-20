@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00131",
+  "name": "毕雯",
+  "gender": "女",
+  "age": 54,
+  "examination_date": "2024-05-19",
+  "symptoms": "体检发现可疑结节，复评",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.4 mIU/L (正常)",
+    "FT3": "4.0 pmol/L (正常)",
+    "FT4": "15.4 pmol/L (正常)",
+    "Tg": "24.3 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E9",
+    "probe_frequency": "10MHz",
+    "overall_gain": "64dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00131.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00131.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00131.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00131.avi",
+      "lymph_nodes": "ln_seg_video_P00131.avi",
+      "esophagus": "eso_seg_video_P00131.avi",
+      "trachea": "trachea_seg_video_P00131.avi",
+      "parathyroid": "para_seg_video_P00131.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约55×19×18mm，左叶约54×19×18mm",
+    "thyroid_shape": "形态饱满，包膜完整",
+    "thyroid_echo": "实质回声不均偏低",
+    "thyroid_nodules_determined": "右叶下极低回声结节约13×10mm，边界不清，点状强回声，C-TIRADS 4B 类",
+    "blood_flow_richness": "结节内血流中等",
+    "blood_flow_velocity": "PSV 42cm/s",
+    "blood_flow_ri": "0.64",
+    "ti_rads_score": "4B"
+  },
+  "reports": {
+    "visual_report": "右叶下极低回声结节伴微钙化征象",
+    "structured_report": "右叶13×10mm低回声结节；边界欠清；见点状强回声；纵横比≥1；周边未见异常淋巴结。",
+    "verified_report": "建议FNA进一步明确。",
+    "patient_communication": "存在中度恶性风险，请尽快穿刺。"
+  },
+  "conclusion": "右叶低回声可疑结节，C-TIRADS 4B 类",
+  "recommendation": "FNA与6个月复查颈部超声",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

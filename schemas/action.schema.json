@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Action",
+  "type": "object",
+  "required": ["type"],
+  "properties": {
+    "type": { "enum": ["EXECUTE", "ROLLBACK", "CLARIFY", "GENERATE_REPORT"] },
+    "node": { "type": ["string", "null"] },
+    "policy": {
+      "type": ["string", "null"],
+      "enum": ["aggregate_only", "full_downstream", "custom", null]
+    },
+    "slot": { "type": ["string", "null"] },
+    "payload": { "type": ["object", "null"], "additionalProperties": true },
+    "include_nodes": { "type": ["array", "null"], "items": { "type": "string" } },
+    "fields": { "type": ["array", "null"], "items": { "type": "string" } },
+    "include_reports_fixed": { "type": ["boolean", "null"] },
+    "dry_run": { "type": ["boolean", "null"] },
+    "meta": { "type": ["object", "null"], "additionalProperties": true }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "EXECUTE" } }, "required": ["type"] },
+      "then": { "required": ["node"] }
+    },
+    {
+      "if": { "properties": { "type": { "const": "ROLLBACK" } }, "required": ["type"] },
+      "then": { "required": ["node", "policy"] }
+    },
+    {
+      "if": { "properties": { "policy": { "const": "custom" } }, "required": ["policy"] },
+      "then": {
+        "anyOf": [
+          { "required": ["include_nodes"] },
+          { "required": ["fields"] }
+        ]
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            { "required": ["include_nodes"] },
+            { "required": ["fields"] }
+          ]
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

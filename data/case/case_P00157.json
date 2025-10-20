@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00157",
+  "name": "罗斌",
+  "gender": "男",
+  "age": 46,
+  "examination_date": "2024-01-20",
+  "symptoms": "颈前区可触及硬结节并轻痛",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.0 mIU/L (正常)",
+    "FT3": "4.2 pmol/L (正常)",
+    "FT4": "15.6 pmol/L (正常)",
+    "Tg": "26.4 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E10",
+    "probe_frequency": "10MHz",
+    "overall_gain": "61dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00157.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00157.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00157.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00157.avi",
+      "lymph_nodes": "ln_seg_video_P00157.avi",
+      "esophagus": "eso_seg_video_P00157.avi",
+      "trachea": "trachea_seg_video_P00157.avi",
+      "parathyroid": "para_seg_video_P00157.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约61×22×20mm，左叶约59×21×19mm",
+    "thyroid_shape": "形态饱满，包膜可疑中断",
+    "thyroid_echo": "低回声不均匀",
+    "thyroid_nodules_determined": "右叶中部低回声结节约21×15mm，边界不清，不规则，多发微钙化，纵横比>1，疑包膜外侵犯，C-TIRADS 5 类",
+    "blood_flow_richness": "结节内及周边血流显著丰富",
+    "blood_flow_velocity": "PSV 56cm/s",
+    "blood_flow_ri": "0.68",
+    "ti_rads_score": "5"
+  },
+  "reports": {
+    "visual_report": "右叶中部低回声不规则结节，微钙化明显，包膜外侵犯可疑",
+    "structured_report": "右叶21×15mm低回声结节；不规则、边界不清；多发微钙化；纵横比>1；血流显著增多；可疑外侵。",
+    "verified_report": "高度恶性可能，建议尽快分期与治疗。",
+    "patient_communication": "需尽快穿刺并进行术前分期评估，讨论手术方案。"
+  },
+  "conclusion": "右叶高度可疑恶性结节，C-TIRADS 5 类",
+  "recommendation": "尽快FNA与MDT讨论治疗策略",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

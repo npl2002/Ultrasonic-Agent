@@ -1,0 +1,55 @@
+{
+    "patient_id": "P00001",
+    "gender": "女",
+    "age": 45,
+    "name": "王静",
+    "examination_date": "2024-08-10",
+    "medical_history": "发现颈部增粗伴心慌、多汗2年，近期体检超声提示甲状腺弥漫性病变伴结节。其姐姐有桥本氏甲状腺炎病史。",
+    "symptoms": "心慌、手抖、怕热多汗、情绪急躁、体重下降3kg。自觉颈部有压迫感，吞咽时有异物感。",
+    "lab_results": {
+        "TSH": "0.15 mIU/L (降低)",
+        "FT3": "7.8 pmol/L (升高)",
+        "FT4": "25.2 pmol/L (升高)",
+        "TgAb": "180.6 IU/mL (升高)",
+        "TPOAb": "95.3 IU/mL (升高)",
+        "Tg": "22.5 ng/mL",
+        "CEA": "2.5 ng/mL"
+    },
+    "device": {
+        "model": "Mindray Resona 7",
+        "probe_frequency": "7.5MHz",
+        "overall_gain": "62dB",
+        "resolution_width": 640,
+        "resolution_height": 480
+    },
+    "media": {
+        "input_video": "thyroid_ultrasound_p00001_20240810.avi",
+        "thyroid_keyframe_image_data": "keyframe_thyroid_p00001.png",
+        "segmented_thyroid_image_data": "segmented_thyroid_p00001.png",
+        "segmented_video": {
+            "thyroid": "segmented_thyroid_video_data",
+            "lymph_nodes": "segmented_lymph_nodes_video_data",
+            "esophagus": "segmented_esophagus_video_data",
+            "trachea": "segmented_trachea_video_data",
+            "parathyroid": "segmented_parathyroid_video_data"
+        }
+    },
+    "state": {
+        "thyroid_size": "甲状腺右叶6.0×2.5×2.3cm，左叶5.8×2.4×2.2cm，峡部0.5cm，体积弥漫性增大，右叶中部局部膨隆",
+        "thyroid_shape": "形态饱满失常，包膜局部隆起但尚光滑",
+        "thyroid_echo": "回声弥漫性增粗、分布极不均匀，呈典型网格样改变，并于右叶中部可见一1.2×0.9cm低回声结节，边界欠清，形态不规则",
+        "thyroid_nodules_determined": "右叶中部可见一低回声结节，大小约1.2×0.9cm，形态不规则，边界模糊，内见点状强回声，TI-RADS 4B类",
+        "blood_flow_richness": "腺体血流信号普遍丰富，呈'火海征'，结节周边可见环状血流信号",
+        "blood_flow_velocity": "PSV 55cm/s",
+        "blood_flow_ri": "0.65",
+        "ti_rads_score": "4B",
+        "diffuse_lesion_evaluation_result": "符合桥本氏甲状腺炎合并Graves病超声表现",
+        "parathyroid_evaluation_result": "双侧甲状旁腺区未见明显异常回声"
+    },
+    "reports": {
+        "visual_report": "",
+        "structured_report": "",
+        "verified_report": "",
+        "patient_communication": ""
+    }
+}

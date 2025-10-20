@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00073",
+  "name": "杨滨",
+  "gender": "男",
+  "age": 60,
+  "examination_date": "2025-05-10",
+  "symptoms": "颈前区可触及较硬结节",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.2 mIU/L (正常)",
+    "FT3": "4.0 pmol/L (正常)",
+    "FT4": "15.4 pmol/L (正常)",
+    "Tg": "30.6 ng/mL",
+    "CEA": "2.7 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E10",
+    "probe_frequency": "10MHz",
+    "overall_gain": "66dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00073.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00073.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00073.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00073.avi",
+      "lymph_nodes": "ln_seg_video_P00073.avi",
+      "esophagus": "eso_seg_video_P00073.avi",
+      "trachea": "trachea_seg_video_P00073.avi",
+      "parathyroid": "para_seg_video_P00073.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约61×22×20mm，左叶约58×21×19mm",
+    "thyroid_shape": "形态饱满，包膜部分模糊",
+    "thyroid_echo": "低回声不均匀",
+    "thyroid_nodules_determined": "右叶上极低回声结节约18×14mm，不规则，边界不清，微钙化，纵横比>1，C-TIRADS 4C 类",
+    "blood_flow_richness": "结节内及周边血流丰富",
+    "blood_flow_velocity": "PSV 49cm/s",
+    "blood_flow_ri": "0.66",
+    "ti_rads_score": "4C"
+  },
+  "reports": {
+    "visual_report": "右叶上极低回声不规则结节伴微钙化，血流丰富",
+    "structured_report": "右叶18×14mm低回声结节；不规则、边界不清；多发微钙化；纵横比>1；血流明显增多，提示恶性概率较高。",
+    "verified_report": "高风险病灶，建议FNA及术前评估。",
+    "patient_communication": "恶性风险偏高，需尽快进一步处理。"
+  },
+  "conclusion": "右叶高度可疑恶性结节，C-TIRADS 4C 类",
+  "recommendation": "尽快FNA并行外科会诊评估治疗",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

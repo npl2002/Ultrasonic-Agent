@@ -1,0 +1,178 @@
+{
+    "patient_id": "P00002",
+    "gender": "男",
+    "age": 52,
+    "name": "张伟",
+    "examination_date": "2024-09-15",
+    "medical_history": {
+        "radiation_history": "无",
+        "surgical_history": "2018年胆囊切除术",
+        "family_history": "父亲有甲状腺结节史"
+    },
+    "symptoms": "无明显不适，体检发现甲状腺结节。偶有咽部异物感。",
+    "lab_results": {
+        "TSH": "1.2 mIU/L",
+        "FT3": "4.5 pmol/L",
+        "FT4": "15.8 pmol/L",
+        "TgAb": "25.0 IU/mL",
+        "TPOAb": "18.5 IU/mL",
+        "Tg": "15.2 ng/mL",
+        "CEA": "2.1 ng/mL"
+    },
+    "device": {
+        "model": "Mindray Resona 7",
+        "probe_frequency": "7.5MHz",
+        "overall_gain": "60dB",
+        "resolution_width": 640,
+        "resolution_height": 480
+    },
+    "media": {
+        "input_video": "thyroid_ultrasound_p00002_20240915.avi",
+        "thyroid_keyframe_image_data": "keyframe_thyroid_p00002.png",
+        "segmented_thyroid_image_data": "segmented_thyroid_p00002.png",
+        "segmented_video": {
+            "thyroid": "segmented_thyroid_video_data",
+            "lymph_nodes": "segmented_lymph_nodes_video_data",
+            "esophagus": "segmented_esophagus_video_data",
+            "trachea": "segmented_trachea_video_data",
+            "parathyroid": "segmented_parathyroid_video_data"
+        }
+    },
+    "state": {
+        "thyroid_location": "甲状腺位于颈前区，左右叶分布于气管两侧，峡部位于气管前方",
+        "thyroid_size": "甲状腺右叶5.5×2.2×2.0cm，左叶5.3×2.1×2.0cm，峡部0.4cm",
+        "thyroid_shape": "形态规则，包膜光滑",
+        "thyroid_echo": "回声均匀，未见明显弥漫性病变",
+        "capsule_integrity": "包膜完整",
+        "overall_blood": {
+            "richness": "正常",
+            "distribution": "均匀"
+        },
+        "diffuse_lesion_evaluation_result": "未见明显弥漫性病变",
+        "thyroid_nodules_quantity": 3,
+        "thyroid_nodules_detail": {
+            "nodules": [
+                {
+                    "nodule_id": 1,
+                    "blood_flow": {
+                        "PSV": "35cm/s",
+                        "RI": "0.58",
+                        "PI": "0.7",
+                        "pattern": "点状血流"
+                    },
+                    "location": {
+                        "lobe": "右叶",
+                        "pole": "上极",
+                        "distance_to_capsule_mm": 2.5
+                    },
+                    "size_mm": {
+                        "length": 10,
+                        "width": 8,
+                        "depth": 7
+                    },
+                    "morphology": {
+                        "aspect_ratio": 1.25,
+                        "boundary_clarity": "清晰",
+                        "internal_echo_level": "等回声"
+                    },
+                    "calcification_type": ["粗大钙化"],
+                    "composition": {
+                        "cystic_ratio": 0,
+                        "mixed_ratio": 0,
+                        "solid_ratio": 1
+                    },
+                    "supplement": {
+                        "elastography": "弹性成像未见明显异常",
+                        "Sonic imaging": "声速测量正常"
+                    },
+                    "ti_rads_score": "3"
+                },
+                {
+                    "nodule_id": 2,
+                    "blood_flow": {
+                        "PSV": "42cm/s",
+                        "RI": "0.68",
+                        "PI": "0.8",
+                        "pattern": "环状血流"
+                    },
+                    "location": {
+                        "lobe": "右叶",
+                        "pole": "下极",
+                        "distance_to_capsule_mm": 1.8
+                    },
+                    "size_mm": {
+                        "length": 7,
+                        "width": 5,
+                        "depth": 5
+                    },
+                    "morphology": {
+                        "aspect_ratio": 1.4,
+                        "boundary_clarity": "模糊",
+                        "internal_echo_level": "低回声"
+                    },
+                    "calcification_type": ["微钙化"],
+                    "composition": {
+                        "cystic_ratio": 0,
+                        "mixed_ratio": 0,
+                        "solid_ratio": 1
+                    },
+                    "supplement": {
+                        "elastography": "弹性成像显示结节硬度稍高",
+                        "Sonic imaging": "声速稍快"
+                    },
+                    "ti_rads_score": "4A"
+                },
+                {
+                    "nodule_id": 3,
+                    "blood_flow": {
+                        "PSV": "30cm/s",
+                        "RI": "0.55",
+                        "PI": "0.6",
+                        "pattern": "无血流"
+                    },
+                    "location": {
+                        "lobe": "左叶",
+                        "pole": "中部",
+                        "distance_to_capsule_mm": 4.0
+                    },
+                    "size_mm": {
+                        "length": 6,
+                        "width": 5,
+                        "depth": 4
+                    },
+                    "morphology": {
+                        "aspect_ratio": 1.2,
+                        "boundary_clarity": "清晰",
+                        "internal_echo_level": "高回声"
+                    },
+                    "calcification_type": [],
+                    "composition": {
+                        "cystic_ratio": 0.2,
+                        "mixed_ratio": 0.3,
+                        "solid_ratio": 0.5
+                    },
+                    "supplement": {
+                        "elastography": "弹性成像未见异常",
+                        "Sonic imaging": "声速正常"
+                    },
+                    "ti_rads_score": "2"
+                }
+            ]
+        },
+        "invasion": {
+            "capsule": 0,
+            "trachea": 0,
+            "esophagus": 0,
+            "recurrent_laryngeal_nerve": 0
+        },
+        "lymph_node_metastasis_evaluation": "颈部未见异常肿大淋巴结",
+        "parathyroid_evaluation_result": "双侧甲状旁腺区未见明显异常回声"
+    },
+    "reports": {
+        "visual_report": "",
+        "structured_report": "",
+        "verified_report": "",
+        "patient_communication": "",
+        "follow_up_plan": ""
+    }
+}

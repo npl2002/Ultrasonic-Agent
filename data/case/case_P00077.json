@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00077",
+  "name": "陶晨",
+  "gender": "男",
+  "age": 50,
+  "examination_date": "2025-09-05",
+  "symptoms": "颈前区可触及结节",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.3 mIU/L (正常)",
+    "FT3": "4.1 pmol/L (正常)",
+    "FT4": "15.7 pmol/L (正常)",
+    "Tg": "23.9 ng/mL"
+  },
+  "device": {
+    "model": "Mindray Resona 7",
+    "probe_frequency": "12MHz",
+    "overall_gain": "60dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00077.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00077.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00077.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00077.avi",
+      "lymph_nodes": "ln_seg_video_P00077.avi",
+      "esophagus": "eso_seg_video_P00077.avi",
+      "trachea": "trachea_seg_video_P00077.avi",
+      "parathyroid": "para_seg_video_P00077.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约57×20×18mm，左叶约55×19×18mm",
+    "thyroid_shape": "形态饱满，包膜尚清",
+    "thyroid_echo": "回声稍低不均匀",
+    "thyroid_nodules_determined": "右叶中部低回声结节约19×14mm，边界不清，不规则，见微钙化，C-TIRADS 4C 类",
+    "blood_flow_richness": "结节内血流明显增多",
+    "blood_flow_velocity": "PSV 51cm/s",
+    "blood_flow_ri": "0.67",
+    "ti_rads_score": "4C"
+  },
+  "reports": {
+    "visual_report": "右叶中部低回声不规则结节伴微钙化与血流增多",
+    "structured_report": "右叶19×14mm低回声结节；不规则；边界不清；多发点状强回声；血流明显增多；恶性风险较高。",
+    "verified_report": "建议FNA与术前评估。",
+    "patient_communication": "高度怀疑恶性，请尽快完善检查并就诊外科。"
+  },
+  "conclusion": "右叶可疑恶性结节，C-TIRADS 4C 类",
+  "recommendation": "尽快FNA与外科会诊，必要时手术",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

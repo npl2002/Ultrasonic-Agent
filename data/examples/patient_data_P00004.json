@@ -1,0 +1,72 @@
+{
+    "patient_id": "P00004",
+    "gender": "女",
+    "age": 29,
+    "name": "刘婷",
+    "examination_date": "2024-11-12",
+    "medical_history": {
+        "radiation_history": "无",
+        "surgical_history": "无",
+        "family_history": "无"
+    },
+    "symptoms": "无",
+    "lab_results": {
+        "TSH": "2.1 mIU/L",
+        "FT3": "4.8 pmol/L",
+        "FT4": "16.5 pmol/L",
+        "TgAb": "15.0 IU/mL",
+        "TPOAb": "12.3 IU/mL",
+        "Tg": "10.5 ng/mL",
+        "CEA": "1.5 ng/mL"
+    },
+    "device": {
+        "model": "Mindray Resona 7",
+        "probe_frequency": "7.5MHz",
+        "overall_gain": "58dB",
+        "resolution_width": 640,
+        "resolution_height": 480
+    },
+    "media": {
+        "input_video": "thyroid_ultrasound_p00004_20241112.avi",
+        "thyroid_keyframe_image_data": "keyframe_thyroid_p00004.png",
+        "segmented_thyroid_image_data": "segmented_thyroid_p00004.png",
+        "segmented_video": {
+            "thyroid": "segmented_thyroid_video_data",
+            "lymph_nodes": "segmented_lymph_nodes_video_data",
+            "esophagus": "segmented_esophagus_video_data",
+            "trachea": "segmented_trachea_video_data",
+            "parathyroid": "segmented_parathyroid_video_data"
+        }
+    },
+    "state": {
+        "thyroid_location": "甲状腺位于颈前区，左右叶分布于气管两侧，峡部位于气管前方",
+        "thyroid_size": "甲状腺右叶4.8×1.8×1.7cm，左叶4.6×1.7×1.6cm，峡部0.3cm",
+        "thyroid_shape": "形态规则，包膜光滑",
+        "thyroid_echo": "回声均匀，未见异常回声区",
+        "capsule_integrity": "包膜完整",
+        "overall_blood": {
+            "richness": "正常",
+            "distribution": "均匀"
+        },
+        "diffuse_lesion_evaluation_result": "未见明显弥漫性病变",
+        "thyroid_nodules_quantity": 0,
+        "thyroid_nodules_detail": {
+            "nodules": []
+        },
+        "invasion": {
+            "capsule": 0,
+            "trachea": 0,
+            "esophagus": 0,
+            "recurrent_laryngeal_nerve": 0
+        },
+        "lymph_node_metastasis_evaluation": "颈部未见异常肿大淋巴结",
+        "parathyroid_evaluation_result": "双侧甲状旁腺区未见明显异常回声"
+    },
+    "reports": {
+        "visual_report": "",
+        "structured_report": "",
+        "verified_report": "",
+        "patient_communication": "",
+        "follow_up_plan": ""
+    }
+}

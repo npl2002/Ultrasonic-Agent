@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00010",
+  "name": "马静",
+  "gender": "女",
+  "age": 45,
+  "examination_date": "2024-10-01",
+  "symptoms": "体检发现低回声结节",
+  "medical_history": "不清楚详情",
+  "lab_results": {
+    "TSH": "1.7 mIU/L (正常)",
+    "FT3": "4.4 pmol/L (正常)",
+    "FT4": "15.7 pmol/L (正常)",
+    "Tg": "18.2 ng/mL"
+  },
+  "device": {
+    "model": "Samsung RS85",
+    "probe_frequency": "11MHz",
+    "overall_gain": "60dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00010.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00010.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00010.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00010.avi",
+      "lymph_nodes": "ln_seg_video_P00010.avi",
+      "esophagus": "eso_seg_video_P00010.avi",
+      "trachea": "trachea_seg_video_P00010.avi",
+      "parathyroid": "para_seg_video_P00010.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约53×19×17mm，左叶约52×18×16mm",
+    "thyroid_shape": "形态饱满，包膜尚清",
+    "thyroid_echo": "回声稍不均匀",
+    "thyroid_nodules_determined": "左叶下极低回声结节，约13×9mm，边界欠清，呈微小点状强回声，C-TIRADS 4B 类",
+    "blood_flow_richness": "腺体及结节内血流稍丰富",
+    "blood_flow_velocity": "PSV 40cm/s",
+    "blood_flow_ri": "0.63",
+    "ti_rads_score": "4B",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "左叶下极低回声结节伴点状强回声",
+    "structured_report": "左叶下极13×9mm低回声结节；边界欠清；可见微小点状强回声考虑微钙化；纵横比≈1；周边血流轻度增多。",
+    "verified_report": "建议FNA以明确性质。",
+    "patient_communication": "该结节存在一定风险，建议尽快行穿刺检查。"
+  },
+  "conclusion": "左叶低回声可疑结节，C-TIRADS 4B 类",
+  "recommendation": "建议尽快行细针穿刺活检（FNA）",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

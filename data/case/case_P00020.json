@@ -1,0 +1,59 @@
+{
+  "patient_id": "P00020",
+  "name": "张倩",
+  "gender": "女",
+  "age": 27,
+  "examination_date": "2023-04-20",
+  "symptoms": "心悸、多汗、体重下降",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "0.01 mIU/L (降低)",
+    "FT3": "9.2 pmol/L (升高)",
+    "FT4": "28.4 pmol/L (升高)",
+    "Tg": "10.7 ng/mL"
+  },
+  "device": {
+    "model": "Siemens ACUSON S2000",
+    "probe_frequency": "12MHz",
+    "overall_gain": "58dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00020.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00020.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00020.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00020.avi",
+      "lymph_nodes": "ln_seg_video_P00020.avi",
+      "esophagus": "eso_seg_video_P00020.avi",
+      "trachea": "trachea_seg_video_P00020.avi",
+      "parathyroid": "para_seg_video_P00020.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约61×23×21mm，左叶约60×22×20mm",
+    "thyroid_shape": "形态饱满，包膜清楚",
+    "thyroid_echo": "弥漫性低回声，纹理紊乱",
+    "thyroid_nodules_determined": "未见明确结节",
+    "blood_flow_richness": "腺体弥漫血流明显丰富（“火海征”）",
+    "blood_flow_velocity": "PSV 58cm/s",
+    "blood_flow_ri": "0.54",
+    "ti_rads_score": "2",
+    "diffuse_lesion_evaluation_result": "Graves 病表现",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "甲状腺增大伴弥漫强血流信号，甲功提示甲亢",
+    "structured_report": "双侧甲状腺明显增大，实质弥漫性低回声与血流显著增多；未见明确结节；结合甲功提示甲状腺毒症，符合Graves病超声表现。",
+    "verified_report": "建议内分泌评估抗体与治疗方案。",
+    "patient_communication": "符合甲亢征象，需尽快就诊内分泌科明确治疗方案。"
+  },
+  "conclusion": "弥漫性病变符合 Graves 病表现",
+  "recommendation": "尽快至内分泌门诊评估并启动治疗；1–3个月复查",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

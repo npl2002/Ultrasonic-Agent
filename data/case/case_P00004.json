@@ -1,0 +1,60 @@
+{
+  "patient_id": "P00004",
+  "name": "赵敏",
+  "gender": "女",
+  "age": 29,
+  "examination_date": "2023-11-05",
+  "symptoms": "喉部轻度不适，要求检查",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.3 mIU/L (正常)",
+    "FT3": "4.8 pmol/L (正常)",
+    "FT4": "14.9 pmol/L (正常)",
+    "TgAb": "28 IU/mL (正常)",
+    "Tg": "13.5 ng/mL"
+  },
+  "device": {
+    "model": "Samsung RS85",
+    "probe_frequency": "12MHz",
+    "overall_gain": "61dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00004.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00004.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00004.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00004.avi",
+      "lymph_nodes": "ln_seg_video_P00004.avi",
+      "esophagus": "eso_seg_video_P00004.avi",
+      "trachea": "trachea_seg_video_P00004.avi",
+      "parathyroid": "para_seg_video_P00004.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约46×15×14mm，左叶约45×14×13mm",
+    "thyroid_shape": "形态规则，包膜光整",
+    "thyroid_echo": "回声细腻均匀",
+    "thyroid_nodules_determined": "峡部见约3×2mm微小无回声区，边界清晰，后方回声增强，考虑小囊肿，C-TIRADS 2 类",
+    "blood_flow_richness": "腺体血流信号正常",
+    "blood_flow_velocity": "PSV 27cm/s",
+    "blood_flow_ri": "0.57",
+    "ti_rads_score": "2",
+    "diffuse_lesion_evaluation_result": "正常",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "峡部小囊性灶，余无异常",
+    "structured_report": "峡部3×2mm囊性灶，壁薄；双叶实质回声均匀；未见可疑实性结节或微钙化；血流分布正常。",
+    "verified_report": "良性改变，随访观察。",
+    "patient_communication": "此类小囊肿多为良性，不影响健康。"
+  },
+  "conclusion": "峡部小囊性灶，C-TIRADS 2 类",
+  "recommendation": "常规随访，6–12个月复查超声",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

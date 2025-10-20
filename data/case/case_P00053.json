@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00053",
+  "name": "潘泽",
+  "gender": "男",
+  "age": 51,
+  "examination_date": "2023-06-18",
+  "symptoms": "体检发现可疑结节",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.4 mIU/L (正常)",
+    "FT3": "4.0 pmol/L (正常)",
+    "FT4": "15.4 pmol/L (正常)",
+    "Tg": "25.1 ng/mL"
+  },
+  "device": {
+    "model": "Siemens ACUSON S2000",
+    "probe_frequency": "12MHz",
+    "overall_gain": "60dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00053.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00053.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00053.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00053.avi",
+      "lymph_nodes": "ln_seg_video_P00053.avi",
+      "esophagus": "eso_seg_video_P00053.avi",
+      "trachea": "trachea_seg_video_P00053.avi",
+      "parathyroid": "para_seg_video_P00053.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约57×20×18mm，左叶约55×19×18mm",
+    "thyroid_shape": "形态饱满，包膜完整",
+    "thyroid_echo": "回声不均稍低",
+    "thyroid_nodules_determined": "左叶中部低回声结节约15×12mm，形态不规则，边界欠清，C-TIRADS 4B 类",
+    "blood_flow_richness": "结节内血流中等偏多",
+    "blood_flow_velocity": "PSV 43cm/s",
+    "blood_flow_ri": "0.65",
+    "ti_rads_score": "4B"
+  },
+  "reports": {
+    "visual_report": "左叶中部不规则低回声结节，边界欠清",
+    "structured_report": "左叶15×12mm低回声结节；不规则；边界欠清；纵横比≈1；未见明确包膜外侵犯。",
+    "verified_report": "建议FNA并评估颈部淋巴结。",
+    "patient_communication": "存在中度风险，需穿刺明确诊断。"
+  },
+  "conclusion": "左叶低回声不规则结节，C-TIRADS 4B 类",
+  "recommendation": "FNA及6个月复查颈部超声",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

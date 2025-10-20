@@ -1,0 +1,349 @@
+version: 1
+description: Thyroid agent nodes registry (consumes / produces / side_effects / category)
+
+nodes:
+
+  PATIENT_INFO:
+    consumes: []
+    produces:
+      - patient_id
+      - name
+      - age
+      - gender
+      - medical_history
+      - symptoms
+    side_effects: []
+    category: collect
+
+  LAB_RESULTS:
+    consumes: []
+    produces:
+      - lab_results.TSH
+      - lab_results.FT3
+      - lab_results.FT4
+      - lab_results.TgAb
+      - lab_results.TPOAb
+      - lab_results.Tg
+      - lab_results.CEA
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: collect
+
+  DEVICE_IMPORT:
+    consumes: []
+    produces:
+      - device.model
+      - device.probe_frequency
+      - device.overall_gain
+      - device.resolution_width
+      - device.resolution_height
+    side_effects: []
+    category: collect
+
+  VIDEO_INPUT:
+    consumes: []
+    produces:
+      - media.input_video
+    side_effects: []
+    category: collect
+
+  VIDEO_SEG:
+    consumes:
+      - media.input_video
+    produces:
+      - media.segmented_video.thyroid
+      - media.segmented_video.lymph_nodes
+      - media.segmented_video.esophagus
+      - media.segmented_video.trachea
+      - media.segmented_video.parathyroid
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  KEYFRAME:
+    consumes:
+      - media.input_video
+    produces:
+      - media.thyroid_keyframe_image_data
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  IMG_SEG:
+    consumes:
+      - media.thyroid_keyframe_image_data
+    produces:
+      - media.segmented_thyroid_image_data
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  ORG_OVERVIEW:
+    consumes:
+      - media.segmented_thyroid_image_data
+    produces:
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_location
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  NODULE_EVAL:
+    consumes:
+      - media.segmented_thyroid_image_data
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+    produces:
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  BLOOD_OVERALL:
+    consumes:
+      - media.input_video
+    produces:
+      - state.blood_flow_richness
+      - state.blood_flow_velocity
+      - state.blood_flow_ri
+    side_effects:
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  BLOOD_NODULE:
+    consumes:
+      - state.thyroid_nodules_detail.nodules
+    produces:
+      - state.thyroid_nodules_detail.nodules.blood_flow
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  NODULE_FINE:
+    consumes:
+      - state.thyroid_nodules_detail.nodules
+      - media.segmented_thyroid_image_data
+    produces:
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  INVASION:
+    consumes:
+      - media.segmented_thyroid_image_data
+    produces:
+      - state.invasion
+    side_effects:
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  FUNC_IMAGING:
+    consumes:
+      - state.thyroid_nodules_detail.nodules
+    produces:
+      - state.thyroid_nodules_detail.nodules.supplement
+    side_effects:
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  TI-RADS:
+    consumes:
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_nodules_detail.nodules
+    produces:
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+    side_effects:
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  DIFFUSE_EVAL:
+    consumes:
+      - state.thyroid_size
+      - state.thyroid_echo
+      - lab_results.TSH
+      - lab_results.FT3
+      - lab_results.FT4
+      - lab_results.TgAb
+      - lab_results.TPOAb
+      - state.blood_flow_richness
+    produces:
+      - state.diffuse_lesion_evaluation_result
+      - diffuse.conclusion
+      - diffuse.evidence
+    side_effects:
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  PARATHYROID_EVAL:
+    consumes:
+      - media.segmented_video.parathyroid
+    produces:
+      - state.parathyroid_evaluation_result
+    side_effects:
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  LYMPH_EVAL:
+    consumes:
+      - media.segmented_video.lymph_nodes
+    produces:
+      - lymph.overall
+      - lymph.suspicious_nodes
+      - state.lymph_node_metastasis_evaluation
+    side_effects:
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+    category: analyze
+
+  VIS_REPORT:
+    consumes:
+      - state.*
+      - diffuse.*
+      - lymph.*
+      - ti_rads_overall
+      - ti_rads.reasoning
+    produces:
+      - reports.visual_report
+    side_effects: []
+    category: report
+
+  STRUCT_REPORT:
+    consumes:
+      - patient_id
+      - name
+      - age
+      - gender
+      - medical_history
+      - symptoms
+      - lab_results.*
+      - device.*
+      - state.*
+      - diffuse.*
+      - lymph.*
+      - ti_rads_overall
+      - ti_rads.reasoning
+    produces:
+      - reports.structured_report
+    side_effects: []
+    category: report
+
+  ARCHIVE_REPORT:
+    consumes:
+      - reports.structured_report
+    produces:
+      - reports.verified_report
+    side_effects: []
+    category: report
+
+  PATIENT_COMM:
+    consumes:
+      - reports.structured_report
+      - reports.verified_report
+      - ti_rads_overall
+      - diffuse.conclusion
+      - lymph.overall
+    produces:
+      - reports.patient_communication
+    side_effects: []
+    category: report
+
+  FOLLOW_UP:
+    consumes:
+      - ti_rads_overall
+      - diffuse.conclusion
+      - lymph.overall
+      - state.parathyroid_evaluation_result
+    produces:
+      - reports.follow_up_plan
+    side_effects: []
+    category: report

@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00058",
+  "name": "庄颖",
+  "gender": "女",
+  "age": 38,
+  "examination_date": "2024-01-09",
+  "symptoms": "喉部不适伴声音嘶哑",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "1.5 mIU/L (正常)",
+    "FT3": "4.7 pmol/L (正常)",
+    "FT4": "16.6 pmol/L (正常)",
+    "Tg": "14.8 ng/mL"
+  },
+  "device": {
+    "model": "Mindray Resona 7",
+    "probe_frequency": "12MHz",
+    "overall_gain": "58dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00058.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00058.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00058.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00058.avi",
+      "lymph_nodes": "ln_seg_video_P00058.avi",
+      "esophagus": "eso_seg_video_P00058.avi",
+      "trachea": "trachea_seg_video_P00058.avi",
+      "parathyroid": "para_seg_video_P00058.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约50×18×16mm，左叶约49×18×16mm",
+    "thyroid_shape": "形态尚规则，包膜可疑中断",
+    "thyroid_echo": "低回声不均匀伴硬度升高趋势",
+    "thyroid_nodules_determined": "左叶中部低回声结节约22×16mm，形态不规则，边界不清，多发微钙化，疑侵犯包膜及邻近组织，C-TIRADS 5 类",
+    "blood_flow_richness": "结节内及周边血流显著丰富",
+    "blood_flow_velocity": "PSV 58cm/s",
+    "blood_flow_ri": "0.69",
+    "ti_rads_score": "5"
+  },
+  "reports": {
+    "visual_report": "左叶中部低回声不规则结节，多发微钙化，包膜受累征象",
+    "structured_report": "左叶22×16mm低回声结节；不规则、边界不清；多发微钙化；纵横比>1；血流显著增多；可疑外侵。",
+    "verified_report": "C-TIRADS 5，高度恶性可能，建议尽快分期与治疗。",
+    "patient_communication": "高度可疑恶性，需尽快穿刺并与外科沟通治疗。"
+  },
+  "conclusion": "左叶高度可疑恶性结节，C-TIRADS 5 类",
+  "recommendation": "尽快FNA及完善术前分期评估",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

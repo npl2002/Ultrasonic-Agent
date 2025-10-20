@@ -1,0 +1,61 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "RollbackPolicies",
+    "type": "object",
+    "required": ["aggregate_nodes", "policies"],
+    "properties": {
+      "aggregate_nodes": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "policies": {
+        "type": "object",
+        "required": ["aggregate_only", "full_downstream", "custom"],
+        "properties": {
+          "aggregate_only": {
+            "type": "object",
+            "required": ["mode", "aggregate_only"],
+            "properties": {
+              "mode": { "const": "node_graph" },
+              "aggregate_only": { "const": true },
+              "include_reports_fixed": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          },
+          "full_downstream": {
+            "type": "object",
+            "required": ["mode", "aggregate_only"],
+            "properties": {
+              "mode": { "const": "node_graph" },
+              "aggregate_only": { "const": false },
+              "include_reports_fixed": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          },
+          "custom": {
+            "type": "object",
+            "required": ["mode"],
+            "properties": {
+              "mode": { "const": "node_graph" },
+              "aggregate_only": { "type": "boolean" },
+              "include_reports_fixed": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          },
+          "diagnostic_tiers": {
+            "type": "object",
+            "required": ["mode"],
+            "properties": {
+              "mode": { "const": "diagnostic" },
+              "include_reports_fixed": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+  

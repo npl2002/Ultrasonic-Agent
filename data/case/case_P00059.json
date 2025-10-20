@@ -1,0 +1,61 @@
+{
+  "patient_id": "P00059",
+  "name": "吕薇",
+  "gender": "女",
+  "age": 47,
+  "examination_date": "2025-10-01",
+  "symptoms": "乏力伴颈部轻度肿胀",
+  "medical_history": "家族有甲状腺疾病史",
+  "lab_results": {
+    "TSH": "6.0 mIU/L (升高)",
+    "FT3": "3.3 pmol/L (偏低)",
+    "FT4": "10.8 pmol/L (偏低)",
+    "TPOAb": "520 IU/mL (升高)",
+    "TgAb": "190 IU/mL (升高)",
+    "Tg": "11.9 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E9",
+    "probe_frequency": "10MHz",
+    "overall_gain": "63dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00059.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00059.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00059.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00059.avi",
+      "lymph_nodes": "ln_seg_video_P00059.avi",
+      "esophagus": "eso_seg_video_P00059.avi",
+      "trachea": "trachea_seg_video_P00059.avi",
+      "parathyroid": "para_seg_video_P00059.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约59×21×19mm，左叶约58×21×19mm",
+    "thyroid_shape": "形态稍饱满，包膜清楚",
+    "thyroid_echo": "弥漫低回声，纹理粗糙，散在小囊性改变",
+    "thyroid_nodules_determined": "未见明确实性结节",
+    "blood_flow_richness": "腺体血流信号稍丰富",
+    "blood_flow_velocity": "PSV 35cm/s",
+    "blood_flow_ri": "0.60",
+    "ti_rads_score": "2",
+    "diffuse_lesion_evaluation_result": "桥本氏甲状腺炎表现",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "甲状腺弥漫低回声伴抗体升高，考虑桥本氏甲状腺炎",
+    "structured_report": "双叶轻度增大；实质弥漫性低回声与不均；散在小囊性改变；血流稍丰富；结合甲功与抗体显著升高，符合桥本氏甲状腺炎表现。",
+    "verified_report": "建议内分泌随访并评估是否需药物治疗。",
+    "patient_communication": "属慢性甲状腺炎，需定期抽血与超声复查。"
+  },
+  "conclusion": "弥漫性病变符合桥本氏甲状腺炎表现",
+  "recommendation": "3–6个月复查甲功与超声，按需用药管理",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

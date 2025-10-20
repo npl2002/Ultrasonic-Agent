@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00113",
+  "name": "鲁杰",
+  "gender": "男",
+  "age": 61,
+  "examination_date": "2023-06-17",
+  "symptoms": "颈前区可触及小硬结",
+  "medical_history": "冠心病3年",
+  "lab_results": {
+    "TSH": "2.5 mIU/L (正常)",
+    "FT3": "4.0 pmol/L (正常)",
+    "FT4": "15.3 pmol/L (正常)",
+    "Tg": "29.6 ng/mL",
+    "CEA": "2.9 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E10",
+    "probe_frequency": "10MHz",
+    "overall_gain": "65dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00113.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00113.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00113.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00113.avi",
+      "lymph_nodes": "ln_seg_video_P00113.avi",
+      "esophagus": "eso_seg_video_P00113.avi",
+      "trachea": "trachea_seg_video_P00113.avi",
+      "parathyroid": "para_seg_video_P00113.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约58×20×18mm，左叶约57×20×18mm",
+    "thyroid_shape": "形态饱满，包膜尚清",
+    "thyroid_echo": "实质低回声不均匀",
+    "thyroid_nodules_determined": "右叶上极低回声结节约15×12mm，边界不清，点状强回声，C-TIRADS 4B 类",
+    "blood_flow_richness": "结节周边血流增多",
+    "blood_flow_velocity": "PSV 43cm/s",
+    "blood_flow_ri": "0.65",
+    "ti_rads_score": "4B"
+  },
+  "reports": {
+    "visual_report": "右叶上极低回声结节伴微钙化",
+    "structured_report": "右叶15×12mm低回声结节；边界欠清；微钙化；纵横比≥1；血流增多；颈部未见明显异常淋巴结。",
+    "verified_report": "建议FNA并评估后续处理。",
+    "patient_communication": "中度恶性风险，尽快穿刺明确。"
+  },
+  "conclusion": "右叶低回声可疑结节，C-TIRADS 4B 类",
+  "recommendation": "FNA及6个月复查颈部超声",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

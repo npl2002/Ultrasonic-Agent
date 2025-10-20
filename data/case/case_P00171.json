@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00171",
+  "name": "江帆",
+  "gender": "男",
+  "age": 60,
+  "examination_date": "2025-02-06",
+  "symptoms": "颈部轻压痛",
+  "medical_history": "吸烟史10年",
+  "lab_results": {
+    "TSH": "2.4 mIU/L (正常)",
+    "FT3": "3.9 pmol/L (正常)",
+    "FT4": "15.1 pmol/L (正常)",
+    "Tg": "28.6 ng/mL",
+    "CEA": "2.8 ng/mL"
+  },
+  "device": {
+    "model": "Canon Aplio i900",
+    "probe_frequency": "10.5MHz",
+    "overall_gain": "63dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00171.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00171.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00171.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00171.avi",
+      "lymph_nodes": "ln_seg_video_P00171.avi",
+      "esophagus": "eso_seg_video_P00171.avi",
+      "trachea": "trachea_seg_video_P00171.avi",
+      "parathyroid": "para_seg_video_P00171.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约58×20×18mm，左叶约56×19×18mm",
+    "thyroid_shape": "形态饱满，包膜尚清",
+    "thyroid_echo": "回声不均偏低",
+    "thyroid_nodules_determined": "右叶上极低回声结节约14×11mm，边界不清，点状强回声，C-TIRADS 4B 类",
+    "blood_flow_richness": "结节周边血流稍丰富",
+    "blood_flow_velocity": "PSV 44cm/s",
+    "blood_flow_ri": "0.65",
+    "ti_rads_score": "4B"
+  },
+  "reports": {
+    "visual_report": "右叶上极低回声结节伴微钙化",
+    "structured_report": "低回声14×11mm；微钙化；边界欠清；纵横比≥1；血流稍丰富。",
+    "verified_report": "建议穿刺明确性质。",
+    "patient_communication": "尽快安排FNA并随访结果。"
+  },
+  "conclusion": "右叶低回声可疑结节（微钙化），C-TIRADS 4B 类",
+  "recommendation": "FNA与短期复查超声",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

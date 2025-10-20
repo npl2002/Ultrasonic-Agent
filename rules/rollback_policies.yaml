@@ -1,0 +1,26 @@
+version: 1
+description: Rollback policies (add diagnostic tiers)
+
+aggregate_nodes: [TI-RADS, VIS_REPORT, STRUCT_REPORT, ARCHIVE_REPORT, PATIENT_COMM, FOLLOW_UP]
+
+policies:
+  aggregate_only:
+    mode: node_graph
+    aggregate_only: true
+    include_reports_fixed: true
+
+  full_downstream:
+    mode: node_graph
+    aggregate_only: false
+    include_reports_fixed: true
+
+  custom:
+    mode: node_graph
+    aggregate_only: false
+    include_reports_fixed: true
+    include_nodes: []
+    exclude_nodes: []
+
+  diagnostic_tiers:
+    mode: diagnostic        # 调用方按 diagnosis_policies 的 phases 顺序执行
+    include_reports_fixed: true

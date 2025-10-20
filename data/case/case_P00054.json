@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00054",
+  "name": "孟珊",
+  "gender": "女",
+  "age": 58,
+  "examination_date": "2024-11-29",
+  "symptoms": "体检提示微钙化结节，复查",
+  "medical_history": "2型糖尿病5年",
+  "lab_results": {
+    "TSH": "2.7 mIU/L (正常)",
+    "FT3": "3.8 pmol/L (正常)",
+    "FT4": "14.8 pmol/L (正常)",
+    "Tg": "29.3 ng/mL"
+  },
+  "device": {
+    "model": "Philips EPIQ 7",
+    "probe_frequency": "12MHz",
+    "overall_gain": "58dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00054.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00054.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00054.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00054.avi",
+      "lymph_nodes": "ln_seg_video_P00054.avi",
+      "esophagus": "eso_seg_video_P00054.avi",
+      "trachea": "trachea_seg_video_P00054.avi",
+      "parathyroid": "para_seg_video_P00054.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约54×19×18mm，左叶约53×19×18mm",
+    "thyroid_shape": "形态饱满，包膜尚清",
+    "thyroid_echo": "回声稍低不均匀",
+    "thyroid_nodules_determined": "右叶中下部低回声结节约16×12mm，边界欠清，点状强回声，C-TIRADS 4B 类",
+    "blood_flow_richness": "结节周边血流稍增多",
+    "blood_flow_velocity": "PSV 44cm/s",
+    "blood_flow_ri": "0.64",
+    "ti_rads_score": "4B"
+  },
+  "reports": {
+    "visual_report": "右叶中下部低回声结节伴微钙化",
+    "structured_report": "右叶16×12mm低回声结节；微钙化；边界欠清；纵横比≥1；颈部未见可疑淋巴结。",
+    "verified_report": "建议穿刺明确性质。",
+    "patient_communication": "请尽快安排FNA检查以明确诊断。"
+  },
+  "conclusion": "右叶低回声可疑结节（微钙化），C-TIRADS 4B 类",
+  "recommendation": "尽快FNA并根据结果制定治疗计划",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

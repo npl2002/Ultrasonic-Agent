@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00007",
+  "name": "陈波",
+  "gender": "男",
+  "age": 63,
+  "examination_date": "2023-06-27",
+  "symptoms": "健康体检",
+  "medical_history": "冠心病史5年",
+  "lab_results": {
+    "TSH": "2.5 mIU/L (正常)",
+    "FT3": "4.0 pmol/L (正常)",
+    "FT4": "15.8 pmol/L (正常)",
+    "Tg": "24.7 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E9",
+    "probe_frequency": "9MHz",
+    "overall_gain": "64dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00007.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00007.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00007.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00007.avi",
+      "lymph_nodes": "ln_seg_video_P00007.avi",
+      "esophagus": "eso_seg_video_P00007.avi",
+      "trachea": "trachea_seg_video_P00007.avi",
+      "parathyroid": "para_seg_video_P00007.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约55×20×18mm，左叶约53×19×17mm",
+    "thyroid_shape": "形态饱满，包膜完整",
+    "thyroid_echo": "回声稍粗，散在小斑点强回声",
+    "thyroid_nodules_determined": "右叶下极等回声结节，约9×8mm，边界清楚，形态规则，C-TIRADS 3 类",
+    "blood_flow_richness": "腺体血流信号稍丰富",
+    "blood_flow_velocity": "PSV 38cm/s",
+    "blood_flow_ri": "0.60",
+    "ti_rads_score": "3",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "右叶下极小等回声结节，规则",
+    "structured_report": "右叶下极9×8mm等回声结节；轮廓清，纵横比<1；未见微钙化；腺体内血流稍丰富。",
+    "verified_report": "倾向良性结节；建议随访。",
+    "patient_communication": "目前影像更偏向良性，注意复查观察大小变化。"
+  },
+  "conclusion": "右叶等回声结节，C-TIRADS 3 类",
+  "recommendation": "6–12个月后复查",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

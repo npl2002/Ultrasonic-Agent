@@ -1,0 +1,58 @@
+{
+  "patient_id": "P00148",
+  "name": "马逸",
+  "gender": "男",
+  "age": 47,
+  "examination_date": "2023-10-12",
+  "symptoms": "体检提示低回声结节",
+  "medical_history": "父亲有甲状腺结节史",
+  "lab_results": {
+    "TSH": "2.3 mIU/L (正常)",
+    "FT3": "4.2 pmol/L (正常)",
+    "FT4": "15.6 pmol/L (正常)",
+    "Tg": "23.1 ng/mL",
+    "CEA": "2.6 ng/mL"
+  },
+  "device": {
+    "model": "GE LOGIQ E10",
+    "probe_frequency": "10MHz",
+    "overall_gain": "62dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00148.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00148.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00148.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00148.avi",
+      "lymph_nodes": "ln_seg_video_P00148.avi",
+      "esophagus": "eso_seg_video_P00148.avi",
+      "trachea": "trachea_seg_video_P00148.avi",
+      "parathyroid": "para_seg_video_P00148.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约53×18×16mm，左叶约52×18×16mm",
+    "thyroid_shape": "形态规则，包膜清楚",
+    "thyroid_echo": "回声稍低不均",
+    "thyroid_nodules_determined": "右叶上极低回声结节约8×6mm，边界清，形态规则，C-TIRADS 4A 类",
+    "blood_flow_richness": "结节周边血流轻度增多",
+    "blood_flow_velocity": "PSV 33cm/s",
+    "blood_flow_ri": "0.59",
+    "ti_rads_score": "4A"
+  },
+  "reports": {
+    "visual_report": "右叶上极低回声小结节，边界清楚",
+    "structured_report": "右叶8×6mm低回声结节；纵横比<1；无微钙化；血流轻度增多；未见外侵征象。",
+    "verified_report": "低风险结节，建议随访。",
+    "patient_communication": "建议按期复查，如体积增大再考虑穿刺。"
+  },
+  "conclusion": "右叶低回声小结节，C-TIRADS 4A 类",
+  "recommendation": "6–12个月复查超声",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

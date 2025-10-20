@@ -1,0 +1,72 @@
+{
+    "patient_id": "P00003",
+    "gender": "女",
+    "age": 38,
+    "name": "李梅",
+    "examination_date": "2024-10-05",
+    "medical_history": {
+        "radiation_history": "无",
+        "surgical_history": "无",
+        "family_history": "母亲有甲状腺功能亢进史"
+    },
+    "symptoms": "心悸、多汗、体重下降、情绪不稳定",
+    "lab_results": {
+        "TSH": "0.08 mIU/L (降低)",
+        "FT3": "9.2 pmol/L (升高)",
+        "FT4": "28.5 pmol/L (升高)",
+        "TgAb": "210.0 IU/mL (升高)",
+        "TPOAb": "110.5 IU/mL (升高)",
+        "Tg": "18.6 ng/mL",
+        "CEA": "1.8 ng/mL"
+    },
+    "device": {
+        "model": "Mindray Resona 7",
+        "probe_frequency": "7.5MHz",
+        "overall_gain": "64dB",
+        "resolution_width": 640,
+        "resolution_height": 480
+    },
+    "media": {
+        "input_video": "thyroid_ultrasound_p00003_20241005.avi",
+        "thyroid_keyframe_image_data": "keyframe_thyroid_p00003.png",
+        "segmented_thyroid_image_data": "segmented_thyroid_p00003.png",
+        "segmented_video": {
+            "thyroid": "segmented_thyroid_video_data",
+            "lymph_nodes": "segmented_lymph_nodes_video_data",
+            "esophagus": "segmented_esophagus_video_data",
+            "trachea": "segmented_trachea_video_data",
+            "parathyroid": "segmented_parathyroid_video_data"
+        }
+    },
+    "state": {
+        "thyroid_location": "甲状腺位于颈前区，左右叶分布于气管两侧，峡部位于气管前方",
+        "thyroid_size": "甲状腺右叶6.2×2.8×2.5cm，左叶6.0×2.6×2.4cm，峡部0.6cm，体积弥漫性增大",
+        "thyroid_shape": "形态饱满，包膜光滑",
+        "thyroid_echo": "回声弥漫性增粗、分布不均匀，呈网格样改变",
+        "capsule_integrity": "包膜完整",
+        "overall_blood": {
+            "richness": "丰富",
+            "distribution": "火海征"
+        },
+        "diffuse_lesion_evaluation_result": "符合桥本氏甲状腺炎合并Graves病超声表现",
+        "thyroid_nodules_quantity": 0,
+        "thyroid_nodules_detail": {
+            "nodules": []
+        },
+        "invasion": {
+            "capsule": 0,
+            "trachea": 0,
+            "esophagus": 0,
+            "recurrent_laryngeal_nerve": 0
+        },
+        "lymph_node_metastasis_evaluation": "颈部未见异常肿大淋巴结",
+        "parathyroid_evaluation_result": "双侧甲状旁腺区未见明显异常回声"
+    },
+    "reports": {
+        "visual_report": "",
+        "structured_report": "",
+        "verified_report": "",
+        "patient_communication": "",
+        "follow_up_plan": ""
+    }
+}

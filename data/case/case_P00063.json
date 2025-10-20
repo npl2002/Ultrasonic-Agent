@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00063",
+  "name": "李杉",
+  "gender": "男",
+  "age": 58,
+  "examination_date": "2025-03-03",
+  "symptoms": "体检发现小结节",
+  "medical_history": "吸烟史10年",
+  "lab_results": {
+    "TSH": "2.7 mIU/L (正常)",
+    "FT3": "3.9 pmol/L (正常)",
+    "FT4": "15.0 pmol/L (正常)",
+    "Tg": "25.3 ng/mL"
+  },
+  "device": {
+    "model": "Canon Aplio i900",
+    "probe_frequency": "10.5MHz",
+    "overall_gain": "63dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00063.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00063.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00063.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00063.avi",
+      "lymph_nodes": "ln_seg_video_P00063.avi",
+      "esophagus": "eso_seg_video_P00063.avi",
+      "trachea": "trachea_seg_video_P00063.avi",
+      "parathyroid": "para_seg_video_P00063.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约55×19×18mm，左叶约53×18×17mm",
+    "thyroid_shape": "形态饱满，包膜尚清",
+    "thyroid_echo": "回声稍粗不均",
+    "thyroid_nodules_determined": "右叶中部等回声结节约9×7mm，边界清，形态规则，C-TIRADS 3 类",
+    "blood_flow_richness": "结节周边血流轻度增多",
+    "blood_flow_velocity": "PSV 35cm/s",
+    "blood_flow_ri": "0.60",
+    "ti_rads_score": "3"
+  },
+  "reports": {
+    "visual_report": "右叶小等回声结节，边界清楚",
+    "structured_report": "右叶9×7mm等回声结节；纵横比<1；未见微钙化及外侵；血流轻度增多。",
+    "verified_report": "倾向良性，建议观察随访。",
+    "patient_communication": "恶性可能性低，按期复查即可。"
+  },
+  "conclusion": "右叶等回声小结节，C-TIRADS 3 类",
+  "recommendation": "6–12个月后复查超声评估变化",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

@@ -1,0 +1,147 @@
+{
+    "patient_id": "P00001",
+    "gender": "女",
+    "age": 45,
+    "name": "王静",
+    "examination_date": "2024-08-10",
+    "medical_history": {
+        "radiation_history": "无",
+        "surgical_history": "无",
+        "family_history": "姐姐有桥本氏甲状腺炎病史"
+    },
+    "symptoms": "心慌、手抖、怕热多汗、情绪急躁、体重下降3kg。自觉颈部有压迫感，吞咽时有异物感。",
+    "lab_results": {
+        "TSH": "0.15 mIU/L (降低)",
+        "FT3": "7.8 pmol/L (升高)",
+        "FT4": "25.2 pmol/L (升高)",
+        "TgAb": "180.6 IU/mL (升高)",
+        "TPOAb": "95.3 IU/mL (升高)",
+        "Tg": "22.5 ng/mL",
+        "CEA": "2.5 ng/mL"
+    },
+    "device": {
+        "model": "Mindray Resona 7",
+        "probe_frequency": "7.5MHz",
+        "overall_gain": "62dB",
+        "resolution_width": 640,
+        "resolution_height": 480
+    },
+    "media": {
+        "input_video": "thyroid_ultrasound_p00001_20240810.avi",
+        "thyroid_keyframe_image_data": "keyframe_thyroid_p00001.png",
+        "segmented_thyroid_image_data": "segmented_thyroid_p00001.png",
+        "segmented_video": {
+            "thyroid": "segmented_thyroid_video_data",
+            "lymph_nodes": "segmented_lymph_nodes_video_data",
+            "esophagus": "segmented_esophagus_video_data",
+            "trachea": "segmented_trachea_video_data",
+            "parathyroid": "segmented_parathyroid_video_data"
+        }
+    },
+    "state": {
+        "thyroid_location": "甲状腺位于颈前区，左右叶分布于气管两侧，峡部位于气管前方",
+        "thyroid_size": "甲状腺右叶6.0×2.5×2.3cm，左叶5.8×2.4×2.2cm，峡部0.5cm，体积弥漫性增大，右叶中部局部膨隆",
+        "thyroid_shape": "形态饱满失常，包膜局部隆起但尚光滑",
+        "thyroid_echo": "回声弥漫性增粗、分布极不均匀，呈典型网格样改变，并于右叶中部可见一1.2×0.9cm低回声结节，边界欠清，形态不规则",
+        "capsule_integrity": "包膜局部隆起但尚光滑，无中断或明显不规则",
+        "overall_blood":{
+            "richness": "丰富",
+            "distribution": "火海征"
+         },
+        "diffuse_lesion_evaluation_result": "符合桥本氏甲状腺炎合并Graves病超声表现",
+        "thyroid_nodules_quantity": 2,
+        "thyroid_nodules_detail": {
+            "nodules": [
+                {
+                    "nodule_id": 1,
+                    "blood_flow": {
+                        "PSV": "55cm/s",
+                        "RI": "0.65",
+                        "PI": "0.8",
+                        "pattern": "环状血流"
+                    },
+                    "location": {
+                        "lobe": "右叶",
+                        "pole": "中部",
+                        "distance_to_capsule_mm": 3.2
+                    },
+                    "size_mm": {
+                        "length": 12,
+                        "width": 9,
+                        "depth": 8
+                    },
+                    "morphology": {
+                        "aspect_ratio": 1.33,
+                        "boundary_clarity": "模糊",
+                        "internal_echo_level": "低回声"
+                    },
+                    "calcification_type": [
+                        "微钙化"
+                    ],
+                    "composition": {
+                        "cystic_ratio": 0,
+                        "mixed_ratio": 0,
+                        "solid_ratio": 1
+                    },
+                    "supplement": {
+                        "elastography": "弹性成像可见甲状腺腺体硬度稍升高，且结节内部硬度明显升高。",
+                        "Sonic imaging": "声速测量显示甲状腺结节内部声速加快，余腺体未见明显改变。"
+                    },
+                    "ti_rads_score": "4B"
+                },
+                {
+                    "nodule_id": 2,
+                    "blood_flow": {
+                        "PSV": "48cm/s",
+                        "RI": "0.72",
+                        "PI": "0.9",
+                        "pattern": "点状血流"
+                    },
+                    "location": {
+                        "lobe": "左叶",
+                        "pole": "下极",
+                        "distance_to_capsule_mm": 1.0
+                    },
+                    "size_mm": {
+                        "length": 8,
+                        "width": 6,
+                        "depth": 7
+                    },
+                    "morphology": {
+                        "aspect_ratio": 1.14,
+                        "boundary_clarity": "清晰",
+                        "internal_echo_level": "等回声"
+                    },
+                    "calcification_type": [
+                        "粗大钙化"
+                    ],
+                    "composition": {
+                        "cystic_ratio": 0,
+                        "mixed_ratio": 0,
+                        "solid_ratio": 1
+                    },
+                    "supplement": {
+                        "elastography": "弹性成像未见明显异常。",
+                        "Sonic imaging": "声速测量显示结节内部声速正常。"
+                    },
+                    "ti_rads_score": "3"
+                }
+            ]
+        },
+        "invasion": {
+            "capsule": 0,
+            "trachea": 0,
+            "esophagus": 0,
+            "recurrent_laryngeal_nerve": 0
+        },
+        "lymph_node_metastasis_evaluation": "颈部未见异常肿大淋巴结，未见淋巴结转移征象",
+        "parathyroid_evaluation_result": "双侧甲状旁腺区未见明显异常回声"
+    },
+    "reports": {
+        "visual_report": "",
+        "structured_report": "",
+        "verified_report": "",
+        "patient_communication": "",
+        "follow_up_plan": "" 
+    }
+}

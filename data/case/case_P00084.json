@@ -1,0 +1,57 @@
+{
+  "patient_id": "P00084",
+  "name": "王燕",
+  "gender": "女",
+  "age": 37,
+  "examination_date": "2023-11-09",
+  "symptoms": "嗓音易疲劳，要求筛查",
+  "medical_history": "无特殊",
+  "lab_results": {
+    "TSH": "2.0 mIU/L (正常)",
+    "FT3": "4.5 pmol/L (正常)",
+    "FT4": "16.0 pmol/L (正常)",
+    "Tg": "13.4 ng/mL"
+  },
+  "device": {
+    "model": "Samsung RS85",
+    "probe_frequency": "12MHz",
+    "overall_gain": "60dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00084.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00084.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00084.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00084.avi",
+      "lymph_nodes": "ln_seg_video_P00084.avi",
+      "esophagus": "eso_seg_video_P00084.avi",
+      "trachea": "trachea_seg_video_P00084.avi",
+      "parathyroid": "para_seg_video_P00084.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约47×15×14mm，左叶约46×15×14mm",
+    "thyroid_shape": "形态规则，包膜光滑",
+    "thyroid_echo": "回声细腻均匀",
+    "thyroid_nodules_determined": "右叶上极4×3mm无回声小囊肿，C-TIRADS 2 类",
+    "blood_flow_richness": "腺体血流信号正常",
+    "blood_flow_velocity": "PSV 29cm/s",
+    "blood_flow_ri": "0.57",
+    "ti_rads_score": "2"
+  },
+  "reports": {
+    "visual_report": "右叶上极微小囊性灶，余未见异常",
+    "structured_report": "右叶4×3mm无回声灶；形态规则；后方回声增强；未见实性结节；血流正常。",
+    "verified_report": "良性改变，随访即可。",
+    "patient_communication": "无需治疗，建议定期体检复查。"
+  },
+  "conclusion": "右叶小囊肿，C-TIRADS 2 类",
+  "recommendation": "6–12个月复查超声评估变化",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}

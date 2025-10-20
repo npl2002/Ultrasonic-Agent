@@ -1,0 +1,435 @@
+version: 1
+description: Rollback rules (default full clears) derived from node graph; clear = node.produces ∪ downstream.produces ∪ reports_fixed
+
+reports_fixed:
+  - reports.visual_report
+  - reports.structured_report
+  - reports.verified_report
+  - reports.patient_communication
+  - reports.follow_up_plan
+
+rules:
+
+  PATIENT_INFO:
+    clears:
+      # self
+      - patient_id
+      - name
+      - age
+      - gender
+      - medical_history
+      - symptoms
+      # downstream (structure/archives/comm/follow-up; visual report usually references patient info via structured)
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+      # fixed
+      - reports.visual_report
+
+  LAB_RESULTS:
+    clears:
+      # self
+      - lab_results.TSH
+      - lab_results.FT3
+      - lab_results.FT4
+      - lab_results.TgAb
+      - lab_results.TPOAb
+      - lab_results.Tg
+      - lab_results.CEA
+      # downstream (diffuse & reports chain)
+      - state.diffuse_lesion_evaluation_result
+      - diffuse.conclusion
+      - diffuse.evidence
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  DEVICE_IMPORT:
+    clears:
+      # self
+      - device.model
+      - device.probe_frequency
+      - device.overall_gain
+      - device.resolution_width
+      - device.resolution_height
+      # downstream (reports chain typically cites device)
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+      # fixed
+      - reports.visual_report
+
+  VIDEO_INPUT:
+    clears:
+      # self
+      - media.input_video
+      # downstream (video -> seg/keyframe/blood_overall -> images/reports)
+      - media.segmented_video.thyroid
+      - media.segmented_video.lymph_nodes
+      - media.segmented_video.esophagus
+      - media.segmented_video.trachea
+      - media.segmented_video.parathyroid
+      - media.thyroid_keyframe_image_data
+      - media.segmented_thyroid_image_data
+      - state.invasion
+      - state.blood_flow_richness
+      - state.blood_flow_velocity
+      - state.blood_flow_ri
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_location
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      - state.thyroid_nodules_detail.nodules.supplement
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - state.diffuse_lesion_evaluation_result
+      - diffuse.conclusion
+      - diffuse.evidence
+      - lymph.overall
+      - lymph.suspicious_nodes
+      - state.lymph_node_metastasis_evaluation
+      - state.parathyroid_evaluation_result
+      # reports chain
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  VIDEO_SEG:
+    clears:
+      # self
+      - media.segmented_video.thyroid
+      - media.segmented_video.lymph_nodes
+      - media.segmented_video.esophagus
+      - media.segmented_video.trachea
+      - media.segmented_video.parathyroid
+      # downstream
+      - media.segmented_thyroid_image_data
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_location
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      - state.thyroid_nodules_detail.nodules.supplement
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      - lymph.overall
+      - lymph.suspicious_nodes
+      - state.lymph_node_metastasis_evaluation
+      - state.parathyroid_evaluation_result
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  KEYFRAME:
+    clears:
+      # self
+      - media.thyroid_keyframe_image_data
+      # downstream
+      - media.segmented_thyroid_image_data
+      - state.invasion
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_location
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      - state.thyroid_nodules_detail.nodules.supplement
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  IMG_SEG:
+    clears:
+      # self
+      - media.segmented_thyroid_image_data
+      # downstream
+      - state.invasion
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_location
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      - state.thyroid_nodules_detail.nodules.supplement
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  ORG_OVERVIEW:
+    clears:
+      # self
+      - state.thyroid_size
+      - state.thyroid_shape
+      - state.thyroid_echo
+      - state.thyroid_location
+      # downstream
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      - state.thyroid_nodules_detail.nodules.supplement
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  NODULE_EVAL:
+    clears:
+      # self
+      - state.thyroid_nodules_determined
+      - state.thyroid_nodules_detail.nodules
+      # downstream
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      - state.thyroid_nodules_detail.nodules.supplement
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  BLOOD_OVERALL:
+    clears:
+      # self
+      - state.blood_flow_richness
+      - state.blood_flow_velocity
+      - state.blood_flow_ri
+      # downstream (diffuse & reports)
+      - state.diffuse_lesion_evaluation_result
+      - diffuse.conclusion
+      - diffuse.evidence
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  BLOOD_NODULE:
+    clears:
+      # self
+      - state.thyroid_nodules_detail.nodules.blood_flow
+      # downstream
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  NODULE_FINE:
+    clears:
+      # self
+      - state.thyroid_nodules_detail.nodules.location
+      - state.thyroid_nodules_detail.nodules.size_mm
+      - state.thyroid_nodules_detail.nodules.morphology
+      - state.thyroid_nodules_detail.nodules.calcification_type
+      - state.thyroid_nodules_detail.nodules.composition
+      # downstream
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  INVASION:
+    clears:
+      # self
+      - state.invasion
+      # downstream (reports)
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  FUNC_IMAGING:
+    clears:
+      # self
+      - state.thyroid_nodules_detail.nodules.supplement
+      # downstream
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # reports
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  TI-RADS:
+    clears:
+      # self
+      - state.thyroid_nodules_detail.nodules.ti_rads_score
+      - ti_rads_overall
+      - ti_rads.reasoning
+      # downstream (reports chain)
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  DIFFUSE_EVAL:
+    clears:
+      # self
+      - state.diffuse_lesion_evaluation_result
+      - diffuse.conclusion
+      - diffuse.evidence
+      # downstream (reports chain)
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  PARATHYROID_EVAL:
+    clears:
+      # self
+      - state.parathyroid_evaluation_result
+      # downstream (reports chain)
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  LYMPH_EVAL:
+    clears:
+      # self
+      - lymph.overall
+      - lymph.suspicious_nodes
+      - state.lymph_node_metastasis_evaluation
+      # downstream (reports chain)
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  VIS_REPORT:
+    clears:
+      # self
+      - reports.visual_report
+      # downstream
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+
+  STRUCT_REPORT:
+    clears:
+      # self
+      - reports.structured_report
+      # downstream
+      - reports.verified_report
+      - reports.patient_communication
+      - reports.follow_up_plan
+      # fixed also ensures visual re-render if pipeline depends on it
+      - reports.visual_report
+
+  ARCHIVE_REPORT:
+    clears:
+      # self
+      - reports.verified_report
+      # downstream
+      - reports.patient_communication
+      - reports.follow_up_plan
+      # fixed (to keep invariants)
+      - reports.visual_report
+      - reports.structured_report
+
+  PATIENT_COMM:
+    clears:
+      # self
+      - reports.patient_communication
+      # downstream
+      - reports.follow_up_plan
+      # fixed
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+
+  FOLLOW_UP:
+    clears:
+      # self
+      - reports.follow_up_plan
+      # fixed (keep policy consistency)
+      - reports.visual_report
+      - reports.structured_report
+      - reports.verified_report
+      - reports.patient_communication

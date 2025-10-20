@@ -1,0 +1,1180 @@
+[
+{
+"patient_id": "P00001",
+"name": "张伟",
+"gender": "男",
+"age": 42,
+"examination_date": "2023-03-15",
+"symptoms": "体检发现甲状腺回声异常",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "2.1 mIU/L (正常)",
+"FT3": "4.3 pmol/L (正常)",
+"FT4": "15.0 pmol/L (正常)",
+"Tg": "19.8 ng/mL",
+"CEA": "2.1 ng/mL"
+},
+"device": {
+"model": "GE LOGIQ E9",
+"probe_frequency": "10MHz",
+"overall_gain": "60dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00001.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00001.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00001.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00001.avi",
+"lymph_nodes": "ln_seg_video_P00001.avi",
+"esophagus": "eso_seg_video_P00001.avi",
+"trachea": "trachea_seg_video_P00001.avi",
+"parathyroid": "para_seg_video_P00001.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约52×18×16mm，左叶约50×17×16mm",
+"thyroid_shape": "形态饱满，包膜光滑",
+"thyroid_echo": "回声均匀",
+"thyroid_nodules_determined": "未见明确结节",
+"blood_flow_richness": "腺体血流信号正常",
+"blood_flow_velocity": "PSV 32cm/s",
+"blood_flow_ri": "0.58",
+"ti_rads_score": "2",
+"diffuse_lesion_evaluation_result": "正常",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "甲状腺体积形态基本正常，未见占位",
+"structured_report": "双侧甲状腺大小形态正常；实质回声均匀；未见明确实性或囊性结节；血流未见异常。",
+"verified_report": "与既往资料对照无明显变化，建议常规随访。",
+"patient_communication": "当前检查未发现可疑病变，如无不适每年复查一次。"
+},
+"conclusion": "未见明确占位病变，C-TIRADS 2 类",
+"recommendation": "建议年度体检复查",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00002",
+"name": "李娜",
+"gender": "女",
+"age": 36,
+"examination_date": "2024-07-22",
+"symptoms": "颈前区可触及微小结节",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.9 mIU/L (正常)",
+"FT3": "4.6 pmol/L (正常)",
+"FT4": "14.8 pmol/L (正常)",
+"TgAb": "35 IU/mL (正常)",
+"Tg": "15.6 ng/mL"
+},
+"device": {
+"model": "Mindray Resona 7",
+"probe_frequency": "12MHz",
+"overall_gain": "62dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00002.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00002.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00002.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00002.avi",
+"lymph_nodes": "ln_seg_video_P00002.avi",
+"esophagus": "eso_seg_video_P00002.avi",
+"trachea": "trachea_seg_video_P00002.avi",
+"parathyroid": "para_seg_video_P00002.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约48×16×15mm，左叶约47×15×14mm",
+"thyroid_shape": "形态尚规则，包膜完整",
+"thyroid_echo": "回声细腻，均匀",
+"thyroid_nodules_determined": "左叶中部可见约4×3mm无回声区，边界清，后方回声增强，考虑小囊肿，C-TIRADS 2 类",
+"blood_flow_richness": "腺体血流信号正常",
+"blood_flow_velocity": "PSV 28cm/s",
+"blood_flow_ri": "0.55",
+"ti_rads_score": "2",
+"diffuse_lesion_evaluation_result": "正常",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶见微小囊性灶，余未见异常",
+"structured_report": "左叶中段4×3mm无回声囊性灶；壁薄光滑；其余实质均匀；未见可疑钙化或形态异常血流。",
+"verified_report": "良性表现，随访观察。",
+"patient_communication": "为小囊肿，属良性改变，不必过度担心。"
+},
+"conclusion": "左叶小囊性结节，C-TIRADS 2 类",
+"recommendation": "建议12个月后复查超声",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00003",
+"name": "王强",
+"gender": "男",
+"age": 58,
+"examination_date": "2025-01-10",
+"symptoms": "体检复查",
+"medical_history": "高血压病史10年",
+"lab_results": {
+"TSH": "2.7 mIU/L (正常)",
+"FT3": "4.2 pmol/L (正常)",
+"FT4": "15.6 pmol/L (正常)",
+"Tg": "22.3 ng/mL",
+"CEA": "2.9 ng/mL"
+},
+"device": {
+"model": "Philips EPIQ 7",
+"probe_frequency": "11MHz",
+"overall_gain": "59dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00003.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00003.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00003.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00003.avi",
+"lymph_nodes": "ln_seg_video_P00003.avi",
+"esophagus": "eso_seg_video_P00003.avi",
+"trachea": "trachea_seg_video_P00003.avi",
+"parathyroid": "para_seg_video_P00003.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约50×17×16mm，左叶约49×17×15mm",
+"thyroid_shape": "形态正常，包膜清晰",
+"thyroid_echo": "回声均匀略粗",
+"thyroid_nodules_determined": "未见明确异常结节",
+"blood_flow_richness": "腺体血流信号稍少",
+"blood_flow_velocity": "PSV 25cm/s",
+"blood_flow_ri": "0.60",
+"ti_rads_score": "2",
+"diffuse_lesion_evaluation_result": "正常",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "甲状腺实质回声略粗，未见结节",
+"structured_report": "双叶体积形态正常，实质回声均匀略粗，无可疑结节或异常血流。",
+"verified_report": "考虑年龄相关改变，临床随访。",
+"patient_communication": "目前未发现肿块或恶性特征，建议每年复查。"
+},
+"conclusion": "未见结节，占位阴性，C-TIRADS 2 类",
+"recommendation": "一年后复查或如有不适提前就诊",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00004",
+"name": "赵敏",
+"gender": "女",
+"age": 29,
+"examination_date": "2023-11-05",
+"symptoms": "喉部轻度不适，要求检查",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "2.3 mIU/L (正常)",
+"FT3": "4.8 pmol/L (正常)",
+"FT4": "14.9 pmol/L (正常)",
+"TgAb": "28 IU/mL (正常)",
+"Tg": "13.5 ng/mL"
+},
+"device": {
+"model": "Samsung RS85",
+"probe_frequency": "12MHz",
+"overall_gain": "61dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00004.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00004.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00004.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00004.avi",
+"lymph_nodes": "ln_seg_video_P00004.avi",
+"esophagus": "eso_seg_video_P00004.avi",
+"trachea": "trachea_seg_video_P00004.avi",
+"parathyroid": "para_seg_video_P00004.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约46×15×14mm，左叶约45×14×13mm",
+"thyroid_shape": "形态规则，包膜光整",
+"thyroid_echo": "回声细腻均匀",
+"thyroid_nodules_determined": "峡部见约3×2mm微小无回声区，边界清晰，后方回声增强，考虑小囊肿，C-TIRADS 2 类",
+"blood_flow_richness": "腺体血流信号正常",
+"blood_flow_velocity": "PSV 27cm/s",
+"blood_flow_ri": "0.57",
+"ti_rads_score": "2",
+"diffuse_lesion_evaluation_result": "正常",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "峡部小囊性灶，余无异常",
+"structured_report": "峡部3×2mm囊性灶，壁薄；双叶实质回声均匀；未见可疑实性结节或微钙化；血流分布正常。",
+"verified_report": "良性改变，随访观察。",
+"patient_communication": "此类小囊肿多为良性，不影响健康。"
+},
+"conclusion": "峡部小囊性灶，C-TIRADS 2 类",
+"recommendation": "常规随访，6–12个月复查超声",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00005",
+"name": "刘洋",
+"gender": "男",
+"age": 47,
+"examination_date": "2024-02-18",
+"symptoms": "颈前区偶有不适",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "2.0 mIU/L (正常)",
+"FT3": "4.1 pmol/L (正常)",
+"FT4": "15.2 pmol/L (正常)",
+"Tg": "20.1 ng/mL"
+},
+"device": {
+"model": "Canon Aplio i900",
+"probe_frequency": "10MHz",
+"overall_gain": "60dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00005.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00005.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00005.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00005.avi",
+"lymph_nodes": "ln_seg_video_P00005.avi",
+"esophagus": "eso_seg_video_P00005.avi",
+"trachea": "trachea_seg_video_P00005.avi",
+"parathyroid": "para_seg_video_P00005.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约54×19×17mm，左叶约52×18×16mm",
+"thyroid_shape": "形态饱满，包膜尚清晰",
+"thyroid_echo": "回声稍粗，分布尚均匀",
+"thyroid_nodules_determined": "右叶中部见一等回声结节，大小约7×6mm，边界清，形态规则，无明显钙化，C-TIRADS 3 类",
+"blood_flow_richness": "腺体血流信号稍丰富",
+"blood_flow_velocity": "PSV 35cm/s",
+"blood_flow_ri": "0.61",
+"ti_rads_score": "3",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶中部小等回声结节，边界清楚",
+"structured_report": "右叶7×6mm等回声结节，边界清晰，形态规则，纵横比<1，无微钙化；周围血流轻度增多。",
+"verified_report": "倾向良性，建议随访。",
+"patient_communication": "结节很小且影像学特征偏良性，可先观察。"
+},
+"conclusion": "右叶小等回声结节，C-TIRADS 3 类",
+"recommendation": "6–12个月复查随访",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00006",
+"name": "周婷",
+"gender": "女",
+"age": 31,
+"examination_date": "2025-04-03",
+"symptoms": "体检发现甲状腺结节",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.6 mIU/L (正常)",
+"FT3": "4.5 pmol/L (正常)",
+"FT4": "16.1 pmol/L (正常)",
+"TgAb": "40 IU/mL (正常)",
+"Tg": "12.9 ng/mL"
+},
+"device": {
+"model": "Siemens ACUSON S2000",
+"probe_frequency": "12MHz",
+"overall_gain": "63dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00006.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00006.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00006.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00006.avi",
+"lymph_nodes": "ln_seg_video_P00006.avi",
+"esophagus": "eso_seg_video_P00006.avi",
+"trachea": "trachea_seg_video_P00006.avi",
+"parathyroid": "para_seg_video_P00006.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约49×17×15mm，左叶约48×16×14mm",
+"thyroid_shape": "形态尚规则，包膜清楚",
+"thyroid_echo": "回声稍粗",
+"thyroid_nodules_determined": "左叶上极见低回声结节，约8×6mm，边界清，内部均匀，无微钙化，C-TIRADS 4A 类",
+"blood_flow_richness": "腺体血流信号正常",
+"blood_flow_velocity": "PSV 30cm/s",
+"blood_flow_ri": "0.59",
+"ti_rads_score": "4A",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶低回声小结节，边界尚清",
+"structured_report": "左叶上极8×6mm低回声结节，形态规则，边界清晰，未见微钙化与侵袭征象；血流未见明显异常。",
+"verified_report": "建议随访，必要时细针穿刺评估。",
+"patient_communication": "此类小结节大多良性，先定期复查即可。"
+},
+"conclusion": "左叶低回声结节，C-TIRADS 4A 类",
+"recommendation": "建议6个月后复查，如增大考虑FNA",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00007",
+"name": "陈波",
+"gender": "男",
+"age": 63,
+"examination_date": "2023-06-27",
+"symptoms": "健康体检",
+"medical_history": "冠心病史5年",
+"lab_results": {
+"TSH": "2.5 mIU/L (正常)",
+"FT3": "4.0 pmol/L (正常)",
+"FT4": "15.8 pmol/L (正常)",
+"Tg": "24.7 ng/mL"
+},
+"device": {
+"model": "GE LOGIQ E9",
+"probe_frequency": "9MHz",
+"overall_gain": "64dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00007.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00007.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00007.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00007.avi",
+"lymph_nodes": "ln_seg_video_P00007.avi",
+"esophagus": "eso_seg_video_P00007.avi",
+"trachea": "trachea_seg_video_P00007.avi",
+"parathyroid": "para_seg_video_P00007.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约55×20×18mm，左叶约53×19×17mm",
+"thyroid_shape": "形态饱满，包膜完整",
+"thyroid_echo": "回声稍粗，散在小斑点强回声",
+"thyroid_nodules_determined": "右叶下极等回声结节，约9×8mm，边界清楚，形态规则，C-TIRADS 3 类",
+"blood_flow_richness": "腺体血流信号稍丰富",
+"blood_flow_velocity": "PSV 38cm/s",
+"blood_flow_ri": "0.60",
+"ti_rads_score": "3",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶下极小等回声结节，规则",
+"structured_report": "右叶下极9×8mm等回声结节；轮廓清，纵横比<1；未见微钙化；腺体内血流稍丰富。",
+"verified_report": "倾向良性结节；建议随访。",
+"patient_communication": "目前影像更偏向良性，注意复查观察大小变化。"
+},
+"conclusion": "右叶等回声结节，C-TIRADS 3 类",
+"recommendation": "6–12个月后复查",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00008",
+"name": "黄丽",
+"gender": "女",
+"age": 40,
+"examination_date": "2025-06-14",
+"symptoms": "颈前区可触及小结节",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.8 mIU/L (正常)",
+"FT3": "4.2 pmol/L (正常)",
+"FT4": "16.0 pmol/L (正常)",
+"TPOAb": "55 IU/mL (正常)",
+"Tg": "17.9 ng/mL"
+},
+"device": {
+"model": "Mindray Resona 7",
+"probe_frequency": "12MHz",
+"overall_gain": "58dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00008.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00008.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00008.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00008.avi",
+"lymph_nodes": "ln_seg_video_P00008.avi",
+"esophagus": "eso_seg_video_P00008.avi",
+"trachea": "trachea_seg_video_P00008.avi",
+"parathyroid": "para_seg_video_P00008.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约50×18×16mm，左叶约49×17×16mm",
+"thyroid_shape": "形态尚规则，包膜完整",
+"thyroid_echo": "回声略低不均",
+"thyroid_nodules_determined": "左叶中下部低回声结节，约10×7mm，边界清楚，形态规则，无微钙化，C-TIRADS 4A 类",
+"blood_flow_richness": "腺体血流信号正常",
+"blood_flow_velocity": "PSV 31cm/s",
+"blood_flow_ri": "0.56",
+"ti_rads_score": "4A",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶低回声小结节，边界尚清",
+"structured_report": "左叶10×7mm低回声结节；轮廓清；内部回声均匀；无微钙化及颈部可疑淋巴结；血流正常。",
+"verified_report": "考虑低风险结节，随访为主。",
+"patient_communication": "建议定期复查，如增大或出现可疑特征再评估。"
+},
+"conclusion": "左叶低回声小结节，C-TIRADS 4A 类",
+"recommendation": "6个月后复查，必要时FNA评估",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00009",
+"name": "孙磊",
+"gender": "男",
+"age": 54,
+"examination_date": "2023-09-09",
+"symptoms": "咽部异物感",
+"medical_history": "吸烟20年",
+"lab_results": {
+"TSH": "2.4 mIU/L (正常)",
+"FT3": "4.1 pmol/L (正常)",
+"FT4": "15.3 pmol/L (正常)",
+"Tg": "25.4 ng/mL",
+"CEA": "2.7 ng/mL"
+},
+"device": {
+"model": "Philips EPIQ 7",
+"probe_frequency": "10MHz",
+"overall_gain": "65dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00009.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00009.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00009.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00009.avi",
+"lymph_nodes": "ln_seg_video_P00009.avi",
+"esophagus": "eso_seg_video_P00009.avi",
+"trachea": "trachea_seg_video_P00009.avi",
+"parathyroid": "para_seg_video_P00009.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约57×21×19mm，左叶约56×20×18mm",
+"thyroid_shape": "形态饱满，包膜尚完整",
+"thyroid_echo": "回声稍粗不均",
+"thyroid_nodules_determined": "右叶上极等回声结节约8×7mm，边界清，形态规则；峡部另见5×4mm无回声区；总体C-TIRADS 3 类",
+"blood_flow_richness": "腺体血流信号稍丰富",
+"blood_flow_velocity": "PSV 36cm/s",
+"blood_flow_ri": "0.62",
+"ti_rads_score": "3",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶等回声小结节伴峡部小囊肿",
+"structured_report": "右叶8×7mm等回声结节，规则清晰；峡部5×4mm囊性灶；未见微钙化及可疑浸润；颈部未见异常淋巴结。",
+"verified_report": "良性可能大，随访观察。",
+"patient_communication": "目前无需治疗，定期复查即可。"
+},
+"conclusion": "右叶等回声结节合并峡部小囊肿，C-TIRADS 3 类",
+"recommendation": "建议9–12个月复查",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00010",
+"name": "马静",
+"gender": "女",
+"age": 45,
+"examination_date": "2024-10-01",
+"symptoms": "体检发现低回声结节",
+"medical_history": "不清楚详情",
+"lab_results": {
+"TSH": "1.7 mIU/L (正常)",
+"FT3": "4.4 pmol/L (正常)",
+"FT4": "15.7 pmol/L (正常)",
+"Tg": "18.2 ng/mL"
+},
+"device": {
+"model": "Samsung RS85",
+"probe_frequency": "11MHz",
+"overall_gain": "60dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00010.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00010.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00010.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00010.avi",
+"lymph_nodes": "ln_seg_video_P00010.avi",
+"esophagus": "eso_seg_video_P00010.avi",
+"trachea": "trachea_seg_video_P00010.avi",
+"parathyroid": "para_seg_video_P00010.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约53×19×17mm，左叶约52×18×16mm",
+"thyroid_shape": "形态饱满，包膜尚清",
+"thyroid_echo": "回声稍不均匀",
+"thyroid_nodules_determined": "左叶下极低回声结节，约13×9mm，边界欠清，呈微小点状强回声，C-TIRADS 4B 类",
+"blood_flow_richness": "腺体及结节内血流稍丰富",
+"blood_flow_velocity": "PSV 40cm/s",
+"blood_flow_ri": "0.63",
+"ti_rads_score": "4B",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶下极低回声结节伴点状强回声",
+"structured_report": "左叶下极13×9mm低回声结节；边界欠清；可见微小点状强回声考虑微钙化；纵横比≈1；周边血流轻度增多。",
+"verified_report": "建议FNA以明确性质。",
+"patient_communication": "该结节存在一定风险，建议尽快行穿刺检查。"
+},
+"conclusion": "左叶低回声可疑结节，C-TIRADS 4B 类",
+"recommendation": "建议尽快行细针穿刺活检（FNA）",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00011",
+"name": "何军",
+"gender": "男",
+"age": 60,
+"examination_date": "2023-12-12",
+"symptoms": "体检复查甲状腺结节",
+"medical_history": "2型糖尿病10年",
+"lab_results": {
+"TSH": "2.9 mIU/L (正常)",
+"FT3": "3.8 pmol/L (正常)",
+"FT4": "14.7 pmol/L (正常)",
+"Tg": "30.2 ng/mL",
+"CEA": "2.6 ng/mL"
+},
+"device": {
+"model": "GE LOGIQ E9",
+"probe_frequency": "10MHz",
+"overall_gain": "66dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00011.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00011.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00011.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00011.avi",
+"lymph_nodes": "ln_seg_video_P00011.avi",
+"esophagus": "eso_seg_video_P00011.avi",
+"trachea": "trachea_seg_video_P00011.avi",
+"parathyroid": "para_seg_video_P00011.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约58×22×19mm，左叶约55×20×18mm",
+"thyroid_shape": "形态饱满，包膜尚完整",
+"thyroid_echo": "弥漫稍低回声，回声不均",
+"thyroid_nodules_determined": "右叶中部低回声结节约12×10mm，边界欠清，内见微小点状强回声，C-TIRADS 4B 类",
+"blood_flow_richness": "结节周边血流稍丰富",
+"blood_flow_velocity": "PSV 42cm/s",
+"blood_flow_ri": "0.64",
+"ti_rads_score": "4B",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶低回声结节伴微钙化征象",
+"structured_report": "右叶12×10mm低回声结节；边界欠清；可见微小点状强回声；纵横比>1倾向；周边血流稍多。",
+"verified_report": "建议进行FNA明确诊断。",
+"patient_communication": "为提高准确性，建议尽快做穿刺检查。"
+},
+"conclusion": "右叶低回声可疑结节，C-TIRADS 4B 类",
+"recommendation": "尽快安排细针穿刺活检及随访",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00012",
+"name": "吴艳",
+"gender": "女",
+"age": 52,
+"examination_date": "2025-03-06",
+"symptoms": "体检发现微钙化结节",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.9 mIU/L (正常)",
+"FT3": "4.3 pmol/L (正常)",
+"FT4": "16.2 pmol/L (正常)",
+"TPOAb": "70 IU/mL (正常)",
+"Tg": "21.6 ng/mL"
+},
+"device": {
+"model": "Philips EPIQ 7",
+"probe_frequency": "12MHz",
+"overall_gain": "60dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00012.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00012.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00012.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00012.avi",
+"lymph_nodes": "ln_seg_video_P00012.avi",
+"esophagus": "eso_seg_video_P00012.avi",
+"trachea": "trachea_seg_video_P00012.avi",
+"parathyroid": "para_seg_video_P00012.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约51×18×17mm，左叶约50×18×16mm",
+"thyroid_shape": "形态尚规则，包膜清",
+"thyroid_echo": "回声稍低不均",
+"thyroid_nodules_determined": "左叶上极低回声结节，约11×9mm，内部见点状强回声，边界不清，C-TIRADS 4B 类",
+"blood_flow_richness": "结节内血流中等",
+"blood_flow_velocity": "PSV 39cm/s",
+"blood_flow_ri": "0.61",
+"ti_rads_score": "4B",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶上极低回声结节伴点状强回声",
+"structured_report": "左叶11×9mm低回声结节，边界不清，见微小点状强回声；纵横比≥1；未见气管或包膜外侵犯征象。",
+"verified_report": "建议FNA，结合临床与随访。",
+"patient_communication": "有一定恶性风险，推荐进行穿刺明确。"
+},
+"conclusion": "左叶低回声可疑结节（微钙化），C-TIRADS 4B 类",
+"recommendation": "建议尽快进行FNA并定期复查",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00013",
+"name": "蒋凯",
+"gender": "男",
+"age": 50,
+"examination_date": "2024-05-19",
+"symptoms": "咽部异物感加重",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "2.2 mIU/L (正常)",
+"FT3": "4.0 pmol/L (正常)",
+"FT4": "15.1 pmol/L (正常)",
+"Tg": "27.5 ng/mL"
+},
+"device": {
+"model": "Canon Aplio i900",
+"probe_frequency": "10.5MHz",
+"overall_gain": "62dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00013.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00013.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00013.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00013.avi",
+"lymph_nodes": "ln_seg_video_P00013.avi",
+"esophagus": "eso_seg_video_P00013.avi",
+"trachea": "trachea_seg_video_P00013.avi",
+"parathyroid": "para_seg_video_P00013.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约56×20×18mm，左叶约54×19×17mm",
+"thyroid_shape": "形态饱满，包膜完整",
+"thyroid_echo": "回声不均稍低",
+"thyroid_nodules_determined": "右叶中下部低回声结节，约15×12mm，边界欠清，内见微钙化灶，C-TIRADS 4B 类",
+"blood_flow_richness": "结节周边血流稍增多",
+"blood_flow_velocity": "PSV 43cm/s",
+"blood_flow_ri": "0.65",
+"ti_rads_score": "4B",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶中下部低回声结节伴微钙化",
+"structured_report": "右叶15×12mm低回声结节，边界欠清；内部回声不均并见点状强回声；纵横比≥1；包膜连续性未见明确中断。",
+"verified_report": "建议FNA，必要时术前评估颈部淋巴结。",
+"patient_communication": "需进一步穿刺排除恶性，尽快安排。"
+},
+"conclusion": "右叶低回声可疑结节，C-TIRADS 4B 类",
+"recommendation": "尽快行FNA并随访颈部淋巴结",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00014",
+"name": "冯媛",
+"gender": "女",
+"age": 38,
+"examination_date": "2023-08-02",
+"symptoms": "体检发现结节，复评级别",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.5 mIU/L (正常)",
+"FT3": "4.6 pmol/L (正常)",
+"FT4": "16.5 pmol/L (正常)",
+"Tg": "16.4 ng/mL"
+},
+"device": {
+"model": "Siemens ACUSON S2000",
+"probe_frequency": "12MHz",
+"overall_gain": "59dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00014.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00014.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00014.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00014.avi",
+"lymph_nodes": "ln_seg_video_P00014.avi",
+"esophagus": "eso_seg_video_P00014.avi",
+"trachea": "trachea_seg_video_P00014.avi",
+"parathyroid": "para_seg_video_P00014.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约49×17×15mm，左叶约48×17×15mm",
+"thyroid_shape": "形态尚规则，包膜清楚",
+"thyroid_echo": "回声稍低不均",
+"thyroid_nodules_determined": "左叶中部低回声结节，约14×10mm，边界欠清，呈不规则形态，C-TIRADS 4B 类",
+"blood_flow_richness": "结节内血流中等",
+"blood_flow_velocity": "PSV 37cm/s",
+"blood_flow_ri": "0.62",
+"ti_rads_score": "4B",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶中部低回声不规则结节",
+"structured_report": "左叶14×10mm低回声结节；边界不清，形态不规则；未见明确包膜外侵犯；建议进一步评估。",
+"verified_report": "C-TIRADS 4B，建议穿刺。",
+"patient_communication": "风险中等偏高，需要穿刺进一步明确。"
+},
+"conclusion": "左叶低回声不规则结节，C-TIRADS 4B 类",
+"recommendation": "建议FNA及短期复查",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00015",
+"name": "许鹏",
+"gender": "男",
+"age": 57,
+"examination_date": "2025-08-21",
+"symptoms": "颈部偶有胀痛",
+"medical_history": "高脂血症",
+"lab_results": {
+"TSH": "2.6 mIU/L (正常)",
+"FT3": "4.2 pmol/L (正常)",
+"FT4": "15.9 pmol/L (正常)",
+"Tg": "29.1 ng/mL"
+},
+"device": {
+"model": "Mindray Resona 7",
+"probe_frequency": "11MHz",
+"overall_gain": "63dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00015.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00015.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00015.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00015.avi",
+"lymph_nodes": "ln_seg_video_P00015.avi",
+"esophagus": "eso_seg_video_P00015.avi",
+"trachea": "trachea_seg_video_P00015.avi",
+"parathyroid": "para_seg_video_P00015.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约60×23×20mm，左叶约58×21×19mm",
+"thyroid_shape": "形态饱满，包膜部分模糊",
+"thyroid_echo": "实质回声不均匀偏低",
+"thyroid_nodules_determined": "右叶下极低回声结节约18×14mm，边界不清，呈不规则形态，见微钙化及纵横比>1，C-TIRADS 4C 类",
+"blood_flow_richness": "结节内及周边血流丰富",
+"blood_flow_velocity": "PSV 48cm/s",
+"blood_flow_ri": "0.66",
+"ti_rads_score": "4C",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶下极低回声不规则结节伴微钙化，周边血流增多",
+"structured_report": "右叶18×14mm低回声结节；边界不清、不规则；纵横比>1；内部点状强回声；周边血流增多，提示恶性概率较高。",
+"verified_report": "C-TIRADS 4C，建议手术/穿刺路径评估。",
+"patient_communication": "恶性风险偏高，需尽快进一步治疗评估。"
+},
+"conclusion": "右叶高度可疑恶性结节，C-TIRADS 4C 类",
+"recommendation": "建议尽快FNA并评估手术可行性",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00016",
+"name": "谭雪",
+"gender": "女",
+"age": 34,
+"examination_date": "2024-01-28",
+"symptoms": "体检发现结节，担心恶性",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.2 mIU/L (正常)",
+"FT3": "4.7 pmol/L (正常)",
+"FT4": "16.7 pmol/L (正常)",
+"Tg": "14.2 ng/mL"
+},
+"device": {
+"model": "Samsung RS85",
+"probe_frequency": "12MHz",
+"overall_gain": "60dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00016.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00016.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00016.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00016.avi",
+"lymph_nodes": "ln_seg_video_P00016.avi",
+"esophagus": "eso_seg_video_P00016.avi",
+"trachea": "trachea_seg_video_P00016.avi",
+"parathyroid": "para_seg_video_P00016.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约47×16×14mm，左叶约46×15×14mm",
+"thyroid_shape": "形态尚规则，包膜清楚",
+"thyroid_echo": "弥漫稍低回声",
+"thyroid_nodules_determined": "左叶上极低回声结节约16×11mm，形态不规则，边界不清，见微钙化，纵横比>1，C-TIRADS 5 类",
+"blood_flow_richness": "结节内血流明显丰富",
+"blood_flow_velocity": "PSV 52cm/s",
+"blood_flow_ri": "0.67",
+"ti_rads_score": "5",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶上极低回声不规则结节伴多发微钙化",
+"structured_report": "左叶16×11mm低回声结节；边界不清；不规则形态；多发微钙化；纵横比>1；血流明显增多，恶性特征符合。",
+"verified_report": "C-TIRADS 5，强烈建议病理证实并评估治疗。",
+"patient_communication": "高度提示恶性，应尽快穿刺并就诊外科。"
+},
+"conclusion": "左叶高度可疑恶性结节，C-TIRADS 5 类",
+"recommendation": "尽快行FNA及多学科会诊",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00017",
+"name": "郭晨",
+"gender": "男",
+"age": 66,
+"examination_date": "2025-02-11",
+"symptoms": "颈前区可触及硬结节",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "2.8 mIU/L (正常)",
+"FT3": "3.9 pmol/L (正常)",
+"FT4": "15.0 pmol/L (正常)",
+"Tg": "33.4 ng/mL",
+"CEA": "2.8 ng/mL"
+},
+"device": {
+"model": "GE LOGIQ E9",
+"probe_frequency": "9.5MHz",
+"overall_gain": "65dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00017.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00017.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00017.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00017.avi",
+"lymph_nodes": "ln_seg_video_P00017.avi",
+"esophagus": "eso_seg_video_P00017.avi",
+"trachea": "trachea_seg_video_P00017.avi",
+"parathyroid": "para_seg_video_P00017.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约62×24×21mm，左叶约59×22×20mm",
+"thyroid_shape": "形态饱满，包膜部分模糊中断",
+"thyroid_echo": "实质低回声不均",
+"thyroid_nodules_determined": "右叶上极低回声结节约22×16mm，形态不规则，边界不清，微钙化，疑包膜侵犯，C-TIRADS 5 类",
+"blood_flow_richness": "结节内及周边血流明显丰富",
+"blood_flow_velocity": "PSV 55cm/s",
+"blood_flow_ri": "0.68",
+"ti_rads_score": "5",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "右叶上极低回声结节，包膜受累征象，微钙化",
+"structured_report": "右叶22×16mm低回声结节；不规则、边界不清；微钙化；包膜连续性可疑中断；考虑外侵可能。",
+"verified_report": "高度怀疑恶性，建议尽快手术评估。",
+"patient_communication": "恶性风险极高，需紧急进一步处理。"
+},
+"conclusion": "右叶高度可疑恶性结节，C-TIRADS 5 类",
+"recommendation": "尽快完善穿刺/术前评估并考虑手术治疗",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00018",
+"name": "崔欣",
+"gender": "女",
+"age": 41,
+"examination_date": "2024-11-17",
+"symptoms": "喉部不适伴声音易疲劳",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "1.9 mIU/L (正常)",
+"FT3": "4.5 pmol/L (正常)",
+"FT4": "16.3 pmol/L (正常)",
+"Tg": "18.9 ng/mL"
+},
+"device": {
+"model": "Philips EPIQ 7",
+"probe_frequency": "12MHz",
+"overall_gain": "61dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00018.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00018.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00018.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00018.avi",
+"lymph_nodes": "ln_seg_video_P00018.avi",
+"esophagus": "eso_seg_video_P00018.avi",
+"trachea": "trachea_seg_video_P00018.avi",
+"parathyroid": "para_seg_video_P00018.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约51×18×16mm，左叶约50×18×16mm",
+"thyroid_shape": "形态尚规则，包膜清晰",
+"thyroid_echo": "回声稍低且不均",
+"thyroid_nodules_determined": "左叶下极低回声结节约17×12mm，边界不清，形态不规则，见微钙化，C-TIRADS 4C 类",
+"blood_flow_richness": "结节内血流中等偏多",
+"blood_flow_velocity": "PSV 47cm/s",
+"blood_flow_ri": "0.66",
+"ti_rads_score": "4C",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "左叶下极低回声不规则结节伴微钙化",
+"structured_report": "左叶17×12mm低回声结节；不规则、边界不清；点状强回声；纵横比>1；血流中等偏多，恶性风险较高。",
+"verified_report": "C-TIRADS 4C，建议病理证实与外科评估。",
+"patient_communication": "建议尽快进行穿刺检查并与外科沟通治疗方案。"
+},
+"conclusion": "左叶可疑恶性结节，C-TIRADS 4C 类",
+"recommendation": "尽快FNA及必要时行手术评估",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00019",
+"name": "韩梅",
+"gender": "女",
+"age": 48,
+"examination_date": "2025-09-12",
+"symptoms": "乏力伴颈部轻度肿胀",
+"medical_history": "甲状腺疾病家族史阳性",
+"lab_results": {
+"TSH": "5.8 mIU/L (升高)",
+"FT3": "3.3 pmol/L (偏低)",
+"FT4": "10.5 pmol/L (偏低)",
+"TPOAb": "520 IU/mL (升高)",
+"TgAb": "230 IU/mL (升高)",
+"Tg": "12.1 ng/mL"
+},
+"device": {
+"model": "GE LOGIQ E9",
+"probe_frequency": "10MHz",
+"overall_gain": "64dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00019.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00019.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00019.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00019.avi",
+"lymph_nodes": "ln_seg_video_P00019.avi",
+"esophagus": "eso_seg_video_P00019.avi",
+"trachea": "trachea_seg_video_P00019.avi",
+"parathyroid": "para_seg_video_P00019.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约58×22×19mm，左叶约57×21×19mm",
+"thyroid_shape": "形态稍饱满，包膜清楚",
+"thyroid_echo": "弥漫低回声伴粗大滤泡样改变",
+"thyroid_nodules_determined": "未见明确实性结节，散在小囊性改变",
+"blood_flow_richness": "腺体血流信号稍丰富",
+"blood_flow_velocity": "PSV 34cm/s",
+"blood_flow_ri": "0.60",
+"ti_rads_score": "2",
+"diffuse_lesion_evaluation_result": "桥本氏甲状腺炎表现",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "甲状腺弥漫低回声伴血流稍丰富，抗体升高",
+"structured_report": "双侧甲状腺增大，实质弥漫性低回声与不均；未见明确可疑实性结节；血流稍丰富；结合实验室抗体显著升高，考虑桥本氏甲状腺炎。",
+"verified_report": "建议内分泌联合随访与甲功监测。",
+"patient_communication": "提示慢性甲状腺炎，需定期抽血监测并评估是否需药物治疗。"
+},
+"conclusion": "弥漫性病变符合桥本氏甲状腺炎表现",
+"recommendation": "建议内分泌门诊随访，3–6个月复查甲功与超声",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+},
+{
+"patient_id": "P00020",
+"name": "张倩",
+"gender": "女",
+"age": 27,
+"examination_date": "2023-04-20",
+"symptoms": "心悸、多汗、体重下降",
+"medical_history": "无特殊",
+"lab_results": {
+"TSH": "0.01 mIU/L (降低)",
+"FT3": "9.2 pmol/L (升高)",
+"FT4": "28.4 pmol/L (升高)",
+"Tg": "10.7 ng/mL"
+},
+"device": {
+"model": "Siemens ACUSON S2000",
+"probe_frequency": "12MHz",
+"overall_gain": "58dB",
+"resolution_width": 640,
+"resolution_height": 480
+},
+"media": {
+"input_video": "thyroid_ultrasound_P00020.avi",
+"thyroid_keyframe_image_data": "thyroid_keyframe_P00020.png",
+"segmented_thyroid_image_data": "thyroid_segment_P00020.png",
+"segmented_video": {
+"thyroid": "thyroid_seg_video_P00020.avi",
+"lymph_nodes": "ln_seg_video_P00020.avi",
+"esophagus": "eso_seg_video_P00020.avi",
+"trachea": "trachea_seg_video_P00020.avi",
+"parathyroid": "para_seg_video_P00020.avi"
+}
+},
+"state": {
+"thyroid_size": "右叶约61×23×21mm，左叶约60×22×20mm",
+"thyroid_shape": "形态饱满，包膜清楚",
+"thyroid_echo": "弥漫性低回声，纹理紊乱",
+"thyroid_nodules_determined": "未见明确结节",
+"blood_flow_richness": "腺体弥漫血流明显丰富（“火海征”）",
+"blood_flow_velocity": "PSV 58cm/s",
+"blood_flow_ri": "0.54",
+"ti_rads_score": "2",
+"diffuse_lesion_evaluation_result": "Graves 病表现",
+"parathyroid_evaluation_result": "未见明显异常回声"
+},
+"reports": {
+"visual_report": "甲状腺增大伴弥漫强血流信号，甲功提示甲亢",
+"structured_report": "双侧甲状腺明显增大，实质弥漫性低回声与血流显著增多；未见明确结节；结合甲功提示甲状腺毒症，符合Graves病超声表现。",
+"verified_report": "建议内分泌评估抗体与治疗方案。",
+"patient_communication": "符合甲亢征象，需尽快就诊内分泌科明确治疗方案。"
+},
+"conclusion": "弥漫性病变符合 Graves 病表现",
+"recommendation": "尽快至内分泌门诊评估并启动治疗；1–3个月复查",
+"metadata": {
+"synthetic": true,
+"batch": "001",
+"prompt_version": "v2_C-TIRADS"
+}
+}
+]

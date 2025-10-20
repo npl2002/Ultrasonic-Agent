@@ -1,0 +1,60 @@
+{
+  "patient_id": "P00143",
+  "name": "谢军",
+  "gender": "男",
+  "age": 58,
+  "examination_date": "2025-05-16",
+  "symptoms": "体检复查，无明显不适",
+  "medical_history": "不清楚详情",
+  "lab_results": {
+    "TSH": "2.8 mIU/L (正常)",
+    "FT3": "3.9 pmol/L (正常)",
+    "FT4": "15.2 pmol/L (正常)",
+    "Tg": "22.0 ng/mL",
+    "CEA": "2.5 ng/mL"
+  },
+  "device": {
+    "model": "Philips EPIQ 7",
+    "probe_frequency": "11MHz",
+    "overall_gain": "59dB",
+    "resolution_width": 640,
+    "resolution_height": 480
+  },
+  "media": {
+    "input_video": "thyroid_ultrasound_P00143.avi",
+    "thyroid_keyframe_image_data": "thyroid_keyframe_P00143.png",
+    "segmented_thyroid_image_data": "thyroid_segment_P00143.png",
+    "segmented_video": {
+      "thyroid": "thyroid_seg_video_P00143.avi",
+      "lymph_nodes": "ln_seg_video_P00143.avi",
+      "esophagus": "eso_seg_video_P00143.avi",
+      "trachea": "trachea_seg_video_P00143.avi",
+      "parathyroid": "para_seg_video_P00143.avi"
+    }
+  },
+  "state": {
+    "thyroid_size": "右叶约50×17×16mm，左叶约49×17×16mm",
+    "thyroid_shape": "形态规则，包膜光整",
+    "thyroid_echo": "回声均匀略粗",
+    "thyroid_nodules_determined": "未见明确结节或占位性病变",
+    "blood_flow_richness": "腺体血流信号略少",
+    "blood_flow_velocity": "PSV 26cm/s",
+    "blood_flow_ri": "0.60",
+    "ti_rads_score": "2",
+    "diffuse_lesion_evaluation_result": "正常",
+    "parathyroid_evaluation_result": "未见明显异常回声"
+  },
+  "reports": {
+    "visual_report": "双叶大小形态正常，未见结节",
+    "structured_report": "实质回声均匀略粗；未见囊性或实性结节；血流分布无异常；颈部未见异常淋巴结。",
+    "verified_report": "稳定，无明显异常。",
+    "patient_communication": "结果正常，建议一年后复查。"
+  },
+  "conclusion": "未见结节，C-TIRADS 2 类",
+  "recommendation": "年度体检复查或症状变化时就诊",
+  "metadata": {
+    "synthetic": true,
+    "batch": "001",
+    "prompt_version": "v2_C-TIRADS"
+  }
+}
