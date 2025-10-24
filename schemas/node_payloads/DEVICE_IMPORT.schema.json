@@ -1,0 +1,10 @@
+{
+  "$id": "schemas/node_payloads/DEVICE_IMPORT.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "DEVICE_IMPORT payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {},
+  "additionalProperties": false
+}

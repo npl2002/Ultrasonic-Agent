@@ -1,0 +1,15 @@
+{
+  "$id": "schemas/node_payloads/BLOOD_NODULE.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "BLOOD_NODULE payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "state.thyroid_nodules_detail.nodules": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

@@ -1,0 +1,24 @@
+{
+  "$id": "schemas/node_payloads/FOLLOW_UP.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "FOLLOW_UP payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "ti_rads_overall": {
+      "type": "string"
+    },
+    "diffuse.conclusion": {
+      "type": "string"
+    },
+    "lymph.overall": {
+      "type": "string"
+    },
+    "state.parathyroid_evaluation_result": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

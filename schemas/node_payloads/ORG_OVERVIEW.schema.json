@@ -1,0 +1,15 @@
+{
+  "$id": "schemas/node_payloads/ORG_OVERVIEW.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "ORG_OVERVIEW payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "media.segmented_thyroid_image_data": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

@@ -1,0 +1,27 @@
+{
+  "$id": "schemas/node_payloads/PATIENT_COMM.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "PATIENT_COMM payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "reports.structured_report": {
+      "type": "string"
+    },
+    "reports.verified_report": {
+      "type": "string"
+    },
+    "ti_rads_overall": {
+      "type": "string"
+    },
+    "diffuse.conclusion": {
+      "type": "string"
+    },
+    "lymph.overall": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

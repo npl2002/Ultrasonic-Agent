@@ -1,0 +1,95 @@
+INTENT_V1:
+  $id: "#/schemas/INTENT_V1"
+  type: object
+  additionalProperties: false
+
+  properties:
+    intent_type:
+      type: string
+      enum: ["confirm_next", "skip_next", "rollback", "clarify"]
+
+    rollback_type:
+      $ref: "../schemas/rollback_policies.schema.json#/$defs/rollback_type"
+
+    # 受控节点名
+    target_node:
+      $ref: "../mappings/nodes.schema.json#/$defs/node_id"
+
+    # 回退理由（目前不需要）
+    # rollback_reason:
+      # type: string
+
+    # 受控节点名（作为“槽位”）
+    slot:
+      $ref: "../mappings/nodes.schema.json#/$defs/node_id"
+
+    # 澄清值（结构将由下面的 build-time oneOf 强约束）
+    value:
+      type: object
+
+    metadata:
+      type: object
+      additionalProperties: true
+
+  required: ["intent_type"]
+
+  oneOf:
+    - title: "确认下一步"
+      properties:
+        intent_type: { const: "confirm_next" }
+      required: ["intent_type"]
+      additionalProperties: false
+
+    - title: "跳过下一步"
+      properties:
+        intent_type: { const: "skip_next" }
+      required: ["intent_type"]
+      additionalProperties: false
+
+    - title: "回退（指定回退策略 + 目标节点）"
+      properties:
+        intent_type: { const: "rollback" }
+        rollback_type:
+          $ref: "../schemas/rollback_policies.schema.json#/$defs/rollback_type"
+        target_node:
+          $ref: "../mappings/nodes.schema.json#/$defs/node_id"
+        rollback_reason: { type: string }
+        metadata:
+          type: object
+          additionalProperties: true
+      required: ["intent_type", "rollback_type", "target_node"]
+      additionalProperties: false
+
+    - title: "澄清槽位"
+      # ↓↓↓ 这一段由构建脚本**自动展开**（每个节点一个 if/then 分支）
+      # ---- AUTOGEN BEGIN: per-node clarify branches ----
+      # 示例仅示意两个节点；实际由构建脚本读取 mappings/nodes.yaml 自动生成完整列表
+      anyOf:
+        - if:
+            properties:
+              intent_type: { const: "clarify" }
+              slot: { const: "ORG_OVERVIEW" }
+          then:
+            properties:
+              intent_type: { const: "clarify" }
+              slot: { const: "ORG_OVERVIEW" }
+              value:
+                $ref: "../schemas/node_payloads/ORG_OVERVIEW.schema.json#payload"
+            required: ["intent_type", "slot", "value"]
+            additionalProperties: false
+
+        - if:
+            properties:
+              intent_type: { const: "clarify" }
+              slot: { const: "DIFFUSE_EVAL" }
+          then:
+            properties:
+              intent_type: { const: "clarify" }
+              slot: { const: "DIFFUSE_EVAL" }
+              value:
+                $ref: "../schemas/node_payloads/DIFFUSE_EVAL.schema.json#payload"
+            required: ["intent_type", "slot", "value"]
+            additionalProperties: false
+
+        # ...（其他节点同理，由脚本自动追加）
+      # ---- AUTOGEN END ----

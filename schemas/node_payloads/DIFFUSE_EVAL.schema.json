@@ -1,0 +1,36 @@
+{
+  "$id": "schemas/node_payloads/DIFFUSE_EVAL.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "DIFFUSE_EVAL payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "state.thyroid_size": {
+      "type": "string"
+    },
+    "state.thyroid_echo": {
+      "type": "string"
+    },
+    "lab_results.TSH": {
+      "type": "string"
+    },
+    "lab_results.FT3": {
+      "type": "string"
+    },
+    "lab_results.FT4": {
+      "type": "string"
+    },
+    "lab_results.TgAb": {
+      "type": "string"
+    },
+    "lab_results.TPOAb": {
+      "type": "string"
+    },
+    "state.blood_flow_richness": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

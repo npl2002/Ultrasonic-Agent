@@ -1,0 +1,18 @@
+{
+  "$id": "schemas/node_payloads/NODULE_FINE.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "NODULE_FINE payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "state.thyroid_nodules_detail.nodules": {
+      "type": "string"
+    },
+    "media.segmented_thyroid_image_data": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

@@ -1,0 +1,24 @@
+{
+  "$id": "schemas/node_payloads/TI-RADS.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "TI-RADS payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "state.thyroid_size": {
+      "type": "string"
+    },
+    "state.thyroid_shape": {
+      "type": "string"
+    },
+    "state.thyroid_echo": {
+      "type": "string"
+    },
+    "state.thyroid_nodules_detail.nodules": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

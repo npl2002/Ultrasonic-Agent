@@ -1,0 +1,266 @@
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Agent Protocol v0.1 (schema_final.yaml)"
+type: object
+additionalProperties: false
+properties:
+  schemas:
+    type: object
+    additionalProperties: false
+    properties:
+
+      PLANNER_PLAN_V1:
+        $id: "#/schemas/PLANNER_PLAN_V1"
+        type: object
+        required: [plan_id, next_node]
+        additionalProperties: false
+        properties:
+          plan_id:
+            type: string
+          next_node:
+            type: string
+            minLength: 1
+          issues:
+            type: array
+            items:
+              type: object
+              required: [code, detail]
+              additionalProperties: false
+              properties:
+                code:
+                  type: string
+                  enum: [missing_dependency, conflict, need_clarification]
+                detail:
+                  type: string
+          notes:
+            type: string
+
+      INTENT_V1:
+        $id: "#/schemas/INTENT_V1"
+        type: object
+        additionalProperties: false
+        properties:
+          intent_type:
+            type: string
+            enum: [confirm_next, skip_next, rollback, clarify]
+          # 引用外部回退策略枚举（建议在 schemas/rollback_policies.schema.json 中定义 $defs.rollback_type）
+          rollback_type:
+            $ref: "../schemas/rollback_policies.schema.json#/$defs/rollback_type"
+          # 目标节点：从受控节点列表里选（由 schemas/nodes.yaml 暴露 $defs.node_id）
+          target_node:
+            $ref: "../schemas/nodes.yaml#/$defs/node_id"
+          # 可选的回退原因
+          rollback_reason:
+            type: string
+          # 澄清的槽位：从受控字段列表里选（由 schemas/slots.schema.json 暴露 $defs/slot_id）
+          slot:
+            $ref: "../schemas/slots.schema.json#/$defs/slot_id"
+          # 澄清后的值（按需可改成更强类型）---需要进一步跟slot强关联
+          value:
+            type: string
+
+    # 附加元信息（自由扩展）
+    metadata:
+      type: object
+      additionalProperties: true
+          target_node: {type: string}
+          rollback_reason: {type: string}
+          slot: {type: string}
+          value: {type: string}
+          metadata: {type: object, additionalProperties: true}
+        required: [intent_type]
+        oneOf:
+          - properties: {intent_type: {const: confirm_next}}
+            required: [intent_type]
+            additionalProperties: false
+          - properties: {intent_type: {const: skip_next}}
+            required: [intent_type]
+            additionalProperties: false
+          - properties: {intent_type: {const: rollback}}
+            required: [intent_type, target_node]
+            additionalProperties: false
+          - properties: {intent_type: {const: clarify}}
+            required: [intent_type, slot, value]
+            additionalProperties: false
+
+              
+      REPORT_PRO_V1:
+        $id: "#/schemas/REPORT_PRO_V1"
+        type: object
+        required: [report_text]
+        additionalProperties: false
+        properties:
+          report_text:
+            type: string
+            minLength: 20
+          images:
+            type: array
+            items:
+              type: object
+              required: [id, caption]
+              additionalProperties: false
+              properties:
+                id: {type: string}
+                caption: {type: string}
+          validation:
+            type: object
+            required: [passed]
+            additionalProperties: false
+            properties:
+              passed: {type: boolean}
+              errors:
+                type: array
+                items: {type: string}
+              warnings:
+                type: array
+                items: {type: string}
+
+      COMMS_REPLY_V1:
+        $id: "#/schemas/COMMS_REPLY_V1"
+        type: object
+        required: [reply_type, text]
+        additionalProperties: false
+        properties:
+          reply_type:
+            type: string
+            enum: [explanation, qa_answer, instruction, safety_notice]
+          text:
+            type: string
+            minLength: 5
+          references:
+            type: array
+            items: {type: string}
+
+      FINAL_STATE_MIN_V1:
+        $id: "#/schemas/FINAL_STATE_MIN_V1"
+        type: object
+        additionalProperties: false
+        required:
+          - exam
+          - gland
+          - nodule_count
+          - nodules
+          - overall_tirads
+          - impression
+          - recommendation
+        properties:
+          exam:
+            type: object
+            required: [device_model, probe_freq_mhz]
+            additionalProperties: false
+            properties:
+              device_model: {type: string}
+              probe_freq_mhz: {type: number}
+          gland:
+            type: object
+            required: [size_mm, echogenicity, diffuse_change]
+            additionalProperties: false
+            properties:
+              size_mm:
+                type: object
+                required: [l, w, t]
+                additionalProperties: false
+                properties:
+                  l: {type: number}
+                  w: {type: number}
+                  t: {type: number}
+              echogenicity:
+                type: string
+                enum: [低回声, 等回声, 高回声, 混杂回声, 不均匀]
+              diffuse_change:
+                type: string
+                enum: [无, 轻度, 中度, 重度, 桥本征象, 甲减征象, 甲亢征象]
+          nodule_count:
+            type: integer
+            minimum: 0
+          nodules:
+            type: array
+            items:
+              type: object
+              required: [id, site, size_mm, features]
+              additionalProperties: false
+              properties:
+                id: {type: string}
+                site:
+                  type: string
+                  enum: [左叶, 右叶, 峡部, 双叶]
+                size_mm:
+                  type: object
+                  required: [max]
+                  additionalProperties: false
+                  properties:
+                    max: {type: number}
+                features:
+                  type: object
+                  required: [composition, calcification, margin, echogenicity, shape, tirads]
+                  additionalProperties: false
+                  properties:
+                    composition: {type: string, enum: [实性, 囊实性, 囊性, 海绵状]}
+                    calcification: {type: string, enum: [无, 微钙化, 粗钙化, 壳样钙化]}
+                    margin: {type: string, enum: [清晰, 模糊, 规则, 不规则, 具浸润征]}
+                    echogenicity: {type: string, enum: [低回声, 等回声, 高回声, 混杂回声]}
+                    shape: {type: string, enum: [纵, 横]}
+                    tirads:
+                      type: string
+                      pattern: "^(3|4A|4B|4C|5)$"
+          overall_tirads:
+            type: string
+            pattern: "^(3|4A|4B|4C|5)$"
+          impression:
+            type: string
+          recommendation:
+            type: string
+          images:
+            type: array
+            items:
+              type: object
+              required: [id, description]
+              additionalProperties: false
+              properties:
+                id: {type: string}
+                url: {type: string}
+                description: {type: string}
+
+      OBSERVATION_V1:
+        $id: "#/schemas/OBSERVATION_V1"
+        type: object
+        additionalProperties: false
+        required:
+          - episode_id
+          - stage
+          - step_index
+          - executed_nodes
+          - observation_summary
+          - allowed_actions
+        properties:
+          episode_id: {type: string}
+          stage:
+            type: string
+            enum: [planner, intent, report, comms]
+          step_index:
+            type: integer
+            minimum: 0
+          executed_nodes:
+            type: array
+            items: {type: string}
+          observation_summary: {type: string}
+          plan_hint: {type: string}
+          user_utterance: {type: string}
+          final_state:
+            $ref: "#/schemas/FINAL_STATE_MIN_V1"
+          images:
+            type: array
+            items:
+              type: object
+              required: [id]
+              additionalProperties: false
+              properties:
+                id: {type: string}
+                url: {type: string}
+                desc: {type: string}
+          allowed_actions:
+            type: array
+            minItems: 1
+            items:
+              type: string
+              enum: [execute, rollback, clarify, skip, confirm]

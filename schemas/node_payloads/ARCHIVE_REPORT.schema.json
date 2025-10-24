@@ -1,0 +1,15 @@
+{
+  "$id": "schemas/node_payloads/ARCHIVE_REPORT.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "ARCHIVE_REPORT payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "reports.structured_report": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

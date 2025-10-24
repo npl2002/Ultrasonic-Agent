@@ -1,0 +1,10 @@
+{
+  "$id": "schemas/node_payloads/VIDEO_INPUT.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "VIDEO_INPUT payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {},
+  "additionalProperties": false
+}

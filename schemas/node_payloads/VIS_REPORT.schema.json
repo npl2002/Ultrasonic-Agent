@@ -1,0 +1,27 @@
+{
+  "$id": "schemas/node_payloads/VIS_REPORT.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "VIS_REPORT payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "state.*": {
+      "type": "string"
+    },
+    "diffuse.*": {
+      "type": "string"
+    },
+    "lymph.*": {
+      "type": "string"
+    },
+    "ti_rads_overall": {
+      "type": "string"
+    },
+    "ti_rads.reasoning": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

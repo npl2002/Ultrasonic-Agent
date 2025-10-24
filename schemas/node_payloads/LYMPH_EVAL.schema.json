@@ -1,0 +1,15 @@
+{
+  "$id": "schemas/node_payloads/LYMPH_EVAL.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "LYMPH_EVAL payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "media.segmented_video.lymph_nodes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

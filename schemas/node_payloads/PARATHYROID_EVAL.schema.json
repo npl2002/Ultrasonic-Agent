@@ -1,0 +1,15 @@
+{
+  "$id": "schemas/node_payloads/PARATHYROID_EVAL.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "PARATHYROID_EVAL payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "media.segmented_video.parathyroid": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

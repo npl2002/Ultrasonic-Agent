@@ -1,0 +1,15 @@
+{
+  "$id": "schemas/node_payloads/IMG_SEG.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {},
+  "title": "IMG_SEG payload",
+  "type": "object",
+  "$anchor": "payload",
+  "properties": {
+    "media.thyroid_keyframe_image_data": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 1
+}

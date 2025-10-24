@@ -1,0 +1,34 @@
+{
+  "$id": "mappings/nodes.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "node_id": {
+      "type": "string",
+      "enum": [
+        "ARCHIVE_REPORT",
+        "BLOOD_NODULE",
+        "BLOOD_OVERALL",
+        "DEVICE_IMPORT",
+        "DIFFUSE_EVAL",
+        "FOLLOW_UP",
+        "FUNC_IMAGING",
+        "IMG_SEG",
+        "INVASION",
+        "KEYFRAME",
+        "LAB_RESULTS",
+        "LYMPH_EVAL",
+        "NODULE_EVAL",
+        "NODULE_FINE",
+        "ORG_OVERVIEW",
+        "PARATHYROID_EVAL",
+        "PATIENT_COMM",
+        "PATIENT_INFO",
+        "STRUCT_REPORT",
+        "TI-RADS",
+        "VIDEO_INPUT",
+        "VIDEO_SEG",
+        "VIS_REPORT"
+      ]
+    }
+  }
+}
